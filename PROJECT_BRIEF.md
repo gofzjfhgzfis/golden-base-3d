@@ -51,7 +51,7 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Fourteen product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
+Fifteen product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
@@ -66,6 +66,7 @@ Fourteen product brands so far, each with its own photo folder (white background
 - **Michel Lubricant** → `assets/products/michel/`
 - **MOIL Lubricants** → `assets/products/moil/`
 - **HUSTON Lubricants** → `assets/products/huston/`
+- **green lube** → `assets/products/green-lube/`
 
 ### Brand 1 — AGDILCO
 
@@ -301,6 +302,25 @@ Label: "USA american HUSTON Lubricants", "Premium Performance Engine Oil". Each 
 | 55 | Terklaz | 10W-30 | SL/CF | 5 L | Orange, turquoise label | `huston/terklaz-10w30-5l.webp` |
 | 56 | Silver | 20W-50 | SL/CF | 5 L | Silver, grey label | `huston/silver-20w50-5l.webp` |
 | 57 | White | HD-70 | CI-4 | 5 L | Blue, white label | `huston/white-hd70-5l.webp` |
+
+### Brand 15 — green lube ("Green Lub")
+
+Brand description (from the user):
+> Green Lub Lubricants are formulated with synthetic technology and premium additive systems to provide reliable protection for gasoline and diesel engines. Designed for durability, cleaner engines, and stronger performance, Green Lub ensures excellent lubrication, reduced wear, and consistent engine efficiency under various operating conditions.
+
+Specs the user pasted: Viscosity 10W30 / 20W50 / TAE FS · API SL/CF / CH-4 · Synthetic Technology · Gasoline, Diesel & Heavy Duty.
+⚠ These specs do NOT match the photos (photos show 5W-20, 5W-30, 15W-40, 20W-50; no 10W-30, no CH-4). "TAE FS" is the garbled text from the Sea Ghost black-jug photo — this spec block was likely copied from Sea Ghost by mistake. Use the photo data below until the user confirms.
+
+Label: "green lube" logo with G-leaf mark, "Most Powerful Lube", "Advanced High Performance Engine Oil", "For Modern / Gasoline Engines" seal, eco claim "green team — Net Zero Emissions". Each grade has a TYPE name and its own color (cap + swirl artwork). Jug: matte black with flowing curved panels, top handle.
+
+| # | Type | Grade | API | Size | Accent / cap color | Image |
+|---|------|-------|-----|------|--------------------|-------|
+| 58 | King (gasoline) | 5W-20 | SL | 5 L | Green | `green-lube/king-5w20-5l.webp` |
+| 59 | Minister (gasoline) | 5W-30 | SL | 5 L | Crimson red | `green-lube/minister-5w30-5l.webp` |
+| 60 | Moster (gasoline) | 15W-40 | SL/CF | 5 L | Gold/orange | `green-lube/moster-15w40-5l.webp` |
+| 61 | Pure (multi engines) | 20W-50 | SL/CF | 5 L | Magenta | `green-lube/pure-20w50-5l.webp` |
+
+Notes: "Moster" spelled as on the label (maybe meant "Monster"/"Master" — ask). Labels print MFG/EXP dates (the King label shows EXP 2025, already past) — use these photos in small size or crop; don't show dates in site text. Brand name written both "green lube" (label) and "Green Lub" (user text) — ask which to use.
 
 Open questions for the user:
 - Is MAX-X Golden Base's own/flagship brand (hero of the site) and the other 8 brands distributed products?
