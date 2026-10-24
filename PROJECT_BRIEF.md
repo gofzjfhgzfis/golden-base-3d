@@ -49,6 +49,14 @@ Sequence:
 
 ---
 
+## Contact (received 2026-10-24)
+
+- Phone + WhatsApp (same number): **0750 444 4258** → international **+964 750 444 4258**
+  - Call link: `tel:+9647504444258`
+  - WhatsApp link: `https://wa.me/9647504444258`
+- Location: Erbil, Kurdistan Region, Iraq (exact address / Google Maps pin still needed)
+- Email, social media, working hours: not given yet
+
 ## Company history — for the About section (received 2026-10-24)
 
 Timeline from the user (year read as the label of the milestone it follows — confirm):
