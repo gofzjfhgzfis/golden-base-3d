@@ -51,7 +51,7 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Fifteen product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
+Sixteen product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
@@ -67,6 +67,7 @@ Fifteen product brands so far, each with its own photo folder (white background,
 - **MOIL Lubricants** → `assets/products/moil/`
 - **HUSTON Lubricants** → `assets/products/huston/`
 - **green lube** → `assets/products/green-lube/`
+- **Original Automotive** → `assets/products/original/`
 
 ### Brand 1 — AGDILCO
 
@@ -321,6 +322,29 @@ Label: "green lube" logo with G-leaf mark, "Most Powerful Lube", "Advanced High 
 | 61 | Pure (multi engines) | 20W-50 | SL/CF | 5 L | Magenta | `green-lube/pure-20w50-5l.webp` |
 
 Notes: "Moster" spelled as on the label (maybe meant "Monster"/"Master" — ask). Labels print MFG/EXP dates (the King label shows EXP 2025, already past) — use these photos in small size or crop; don't show dates in site text. Brand name written both "green lube" (label) and "Green Lub" (user text) — ask which to use.
+
+### Brand 16 — Original Automotive
+
+Brand description (from the user):
+> Original Automotive Lubricants are engineered with premium additives and advanced formulations to deliver superior engine cleanliness, wear protection, and fuel efficiency. Designed for modern gasoline, hybrid, heavy-duty, and transmission systems, Original oils ensure smooth performance, longer engine life, and reliable lubrication under all driving conditions.
+
+Specs given: 0W16 / 0W20 / 10W40 / 15W40 / 20W50 / ATF III · API SN/CF · Usage up to 5000 KM · Sizes 1L / 4L / 25L
+Two label families:
+- **TSX+ line** (mineral/multigrade): logo spelled **"Orginal automotive"** (missing "i") with a pouring-drop "i"; blue label with golden oil drop showing the grade, speedometer, "Using for 5000 KM", "Manufactured with highest additives", "Keep your engine clean with original lubricant".
+- **Full Synthetic line**: all-gold bottle/jug, "Original" script logo inside a golden drop, honeycomb pattern, chrome pistons splashing in golden oil, "Advanced Engine Protection". Very premium — fits the Golden Base gold theme best of all brands.
+
+| # | Line | Grade | API | Size | Container / color | Image |
+|---|------|-------|-----|------|-------------------|-------|
+| 62 | Full Synthetic Hybrid | 0W-16 | SN/CF | 1 L | Gold bottle | `original/full-synthetic-0w16-hybrid-1l.png` |
+| 63 | Full Synthetic | 0W-20 | SN/CF | 4 L | Gold jug | `original/full-synthetic-0w20-4l.webp` |
+| 64 | TSX+ | 10W-40 | (SN/CF) | 1 L | Silver bottle, blue label | `original/tsx-10w40-1l.png` |
+| 65 | TSX+ | 15W-40 | (SN/CF) | 4 L | Grey jug, blue label | `original/tsx-15w40-4l.webp` |
+| 66 | TSX+ | 20W-50 | (SN/CF) | 1 L | Silver bottle, blue label | `original/tsx-20w50-1l.png` |
+| 67 | TSX+ | 20W-50 | (SN/CF) | 4 L | Grey jug, blue label | `original/tsx-20w50-4l.webp` |
+| 68 | TSX+ | 20W-50 | (SN/CF) | 25 L | Orange drum, truck artwork | `original/tsx-20w50-25l.png` |
+| 69 | Transmission Fluid | ATF III | — | 1 L | Red bottle, red label | `original/atf3-1l.png` |
+
+Notes: TSX+ labels don't print the API value; using the brand-level SN/CF the user gave. Logo spelling differs ("Orginal" vs "Original") — ask which to use on the site. The ATF III label also says "Engine Oil" at the bottom (label quirk; on the site call it Transmission Fluid). The 25 L label truck looks like a real production model — show small only.
 
 Open questions for the user:
 - Is MAX-X Golden Base's own/flagship brand (hero of the site) and the other 8 brands distributed products?
