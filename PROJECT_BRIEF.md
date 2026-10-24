@@ -51,13 +51,14 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Six product brands so far, each with its own photo folder (white background, front view):
+Seven product brands so far, each with its own photo folder (white background, front view):
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
 - **F-HORSE** → `assets/products/f-horse/`
 - **AROL Automotive** → `assets/products/arol/`
 - **RK STAR Automotive** → `assets/products/rk-star/`
+- **LONA Lubricants** → `assets/products/lona/`
 
 ### Brand 1 — AGDILCO
 
@@ -160,6 +161,24 @@ Label: "RACING OIL", "Motor Engine Oil", "5000 KM — keep your engine clean", "
 | 29 | Racing Oil | 20W-50 | SL/CF | 5 L | jug | Silver | `rk-star/20w50-5l-silver.webp` |
 
 Note: labels carry a third-party "deluxe" badge — keep out of site text.
+
+### Brand 7 — LONA Lubricants
+
+Brand description (from the user):
+> LONA Lubricants are engineered with modern additive technology to provide reliable engine protection, thermal stability, and long-lasting lubrication. Designed for petrol, diesel, and heavy-duty applications, LONA delivers consistent performance, improved engine cleanliness, and enhanced durability under demanding conditions.
+
+Specs given: Viscosity 15W-40 / 20W-50 / HD-70 / HD-40/50 / SAE 140 · API: SL/CF / CF-4 / CF / GL-1 · Compatibility: Petrol, Diesel & Heavy Duty Engines · Technology: Extra Power Additive Formula · Packaging: 1 L / 5 L
+Label: product line "BLACK POWER", slogan "Power to Control", "New Technology Extra Power", "Ultimate Engine Protection · Superior Performance", "Enhanced Engine Life". Artwork: pistons splashed with golden oil. Container: asymmetric S-curve body with side handle (same mould family as Rouge).
+
+| # | Product | Grade | API | Size | Container | Bottle color / accent | Image |
+|---|---------|-------|-----|------|-----------|-----------------------|-------|
+| 30 | Black Power Multi Type Engine Oil | 15W-40 | SL/CF | 1 L | bottle | Gold/orange, yellow accent | `lona/15w40-1l-gold.webp` |
+| 31 | Black Power Multi Type Engine Oil | 20W-50 | SL/CF | 5 L | jug | Orange, blue accent, blue cap | `lona/20w50-5l-orange.webp` |
+| 32 | Black Power Diesel Engine Oil | HD 40/50 | CF | 1 L | bottle | Blue, red accent | `lona/hd40-50-diesel-1l-blue.webp` |
+| 33 | Black Power Diesel Engine Oil (Heavy Duty) | HD 70 | CF-4 | 5 L | jug | Silver, yellow accent, yellow cap | `lona/hd70-diesel-5l-silver.webp` |
+| 34 | Black Power Gear Oil | SAE 140 | GL-1 | 1 L | bottle | Lime green | `lona/sae140-gl1-1l-green.webp` |
+
+Note: the SAE 140 photo is lower quality (blurry label text) than the others — ask for a better photo if available.
 
 Open questions for the user:
 - More brands coming? (User is sending products brand by brand.)
