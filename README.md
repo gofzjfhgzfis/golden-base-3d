@@ -1,6 +1,6 @@
 # Golden Base — 3D promotional website
 
-Animated, bilingual (Kurdish Sorani RTL / English) website for **Golden Base**, Erbil.
+Animated, trilingual website for **Golden Base**, Erbil — **English (default)**, Kurdish Sorani (RTL) and Arabic (RTL).
 Built with **Vite + vanilla JavaScript**, **Three.js**, **GSAP + ScrollTrigger** and **Lenis**.
 
 - **Hero** – pinned section; each featured bottle rotates in on scroll, floats, and a studio light sweeps across its label. Golden "liquid silk" shader background.
@@ -62,8 +62,9 @@ src/
 ```
 
 ### Editing text
-Every label of the site is in `src/i18n/translations.js` (`ku` and `en`). The phone number /
-WhatsApp number / maps link are at the bottom of the same file (`contact`).
+Every label of the site is in `src/i18n/translations.js` (`en`, `ku`, `ar`). The phone number /
+WhatsApp number / Google Maps link are at the bottom of the same file (`contact`), next to the
+`languages` list (its first entry is the default language).
 Brand and product descriptions are in `src/data/products.js`.
 
 ### Editing products

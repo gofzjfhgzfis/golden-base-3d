@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { createRenderer, getEnvironment, fitToCanvas } from './core.js';
+import { createRenderer, getEnvironment, fitToCanvas, createPipeline } from './core.js';
 import { getBottle } from './bottles.js';
 import { featuredProducts } from '../data/products.js';
 import { clamp, smoothstep, isMobile, lerp } from '../utils.js';
@@ -134,7 +134,7 @@ export async function initHero({ onProgress } = {}) {
   const renderer = createRenderer(canvas);
   const scene = new THREE.Scene();
   scene.environment = await getEnvironment(renderer);
-  scene.environmentIntensity = 0.55;
+  scene.environmentIntensity = 0.38;
   const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 60);
   camera.position.set(0, 0.2, 8);
 
@@ -146,24 +146,28 @@ export async function initHero({ onProgress } = {}) {
 
   // Lights: soft key + rim + a sweeping "studio strip" that slides across the label.
   scene.add(new THREE.AmbientLight('#ffffff', 0.15));
-  const key = new THREE.DirectionalLight('#fff4e0', 1.1);
+  const key = new THREE.DirectionalLight('#fff4e0', 0.8);
   key.position.set(3, 4, 5);
   scene.add(key);
   const rim = new THREE.DirectionalLight('#E6C27A', 2.2);
   rim.position.set(-4, 2, -3);
   scene.add(rim);
-  const sweep = new THREE.SpotLight('#ffffff', 60, 14, 0.32, 0.6, 1.4);
+  const sweep = new THREE.SpotLight('#ffffff', 18, 14, 0.32, 0.7, 1.4);
   sweep.position.set(0, 1, 5);
   scene.add(sweep, sweep.target);
+
+  const pipeline = createPipeline(renderer, scene, camera, { strength: 0.3, radius: 0.5, threshold: 0.92 });
 
   const stage = new THREE.Group();
   scene.add(stage);
   const pedestal = createPedestal();
-  pedestal.position.y = -1.2;
+  pedestal.position.y = -1.16;
   stage.add(pedestal);
 
   // Load every featured bottle (model or procedural fallback).
   const bottles = [];
+  const reflections = [];
+  const FLOOR = -1.14;
   for (let i = 0; i < featuredProducts.length; i++) {
     const b = await getBottle(featuredProducts[i], 2.25);
     const holder = new THREE.Group();
@@ -172,6 +176,19 @@ export async function initHero({ onProgress } = {}) {
     holder.visible = false;
     stage.add(holder);
     bottles.push(holder);
+
+    // Mirrored, faded copy under the bottle → glossy studio-floor reflection.
+    const refl = holder.clone(true);
+    const reflMats = [];
+    refl.traverse((o) => {
+      if (!o.isMesh) return;
+      o.material = o.material.clone();
+      Object.assign(o.material, { transparent: true, opacity: 0, depthWrite: false });
+      reflMats.push(o.material);
+    });
+    refl.userData.mats = reflMats;
+    stage.add(refl);
+    reflections.push(refl);
     onProgress?.((i + 1) / featuredProducts.length);
   }
 
@@ -212,7 +229,7 @@ export async function initHero({ onProgress } = {}) {
   new IntersectionObserver(([e]) => (visible = e.isIntersecting)).observe(section);
 
   function layout() {
-    if (!fitToCanvas(renderer, camera)) return;
+    if (!fitToCanvas(renderer, camera, pipeline)) return;
     // Cover the view with the background plane.
     const dist = camera.position.z + 6;
     const h = 2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * dist;
@@ -254,6 +271,18 @@ export async function initHero({ onProgress } = {}) {
       holder.scale.setScalar(1 - Math.abs(e) * 0.25);
     });
 
+    reflections.forEach((refl, i) => {
+      const h = bottles[i];
+      const fade = h.visible ? 0.2 * (1 - smoothstep(0.15, 0.9, Math.abs(h.position.y))) : 0;
+      refl.visible = fade > 0.005;
+      if (!refl.visible) return;
+      const s = h.scale.x;
+      refl.position.set(h.position.x, 2 * FLOOR - h.position.y, h.position.z);
+      refl.rotation.set(-h.rotation.x, h.rotation.y, -h.rotation.z);
+      refl.scale.set(s, -s, s);
+      refl.userData.mats.forEach((m) => (m.opacity = fade));
+    });
+
     // The studio strip slides across the label as you scroll.
     const local = p - Math.round(p);
     sweep.position.set(Math.sin(local * Math.PI) * 4.5, 1.2, 4.5);
@@ -280,7 +309,7 @@ export async function initHero({ onProgress } = {}) {
     });
     dots.forEach((d, i) => d.classList.toggle('active', i === active && p > -0.2));
 
-    renderer.render(scene, camera);
+    pipeline.render();
   }
   tick();
   window.addEventListener('resize', () => ScrollTrigger.refresh());

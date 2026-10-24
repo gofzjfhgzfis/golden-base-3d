@@ -7,24 +7,31 @@ import * as THREE from 'three';
  */
 
 const materials = () => ({
+  // Pearl-white metallic with a deep clearcoat — reads beautifully against the dark studio.
   paint: new THREE.MeshPhysicalMaterial({
-    color: '#23262d',
-    metalness: 0.75,
-    roughness: 0.32,
+    color: '#d6d2c9',
+    metalness: 0.25,
+    roughness: 0.3,
     clearcoat: 1,
-    clearcoatRoughness: 0.03
+    clearcoatRoughness: 0.1,
+    sheen: 0.2,
+    sheenColor: new THREE.Color('#f3e7cf'),
+    sheenRoughness: 0.4
   }),
-  chrome: new THREE.MeshStandardMaterial({ color: '#f2f2f2', metalness: 1, roughness: 0.07 }),
+  rimPaint: new THREE.MeshStandardMaterial({ color: '#2a2c31', metalness: 0.9, roughness: 0.28 }),
+  caliper: new THREE.MeshPhysicalMaterial({ color: '#C9A34A', metalness: 0.6, roughness: 0.3, clearcoat: 1 }),
+  chrome: new THREE.MeshStandardMaterial({ color: '#f2f2f2', metalness: 1, roughness: 0.14 }),
   gold: new THREE.MeshStandardMaterial({ color: '#C9A34A', metalness: 1, roughness: 0.22 }),
+  // Dark privacy glass: tinted + reflective (no transmission pass → cheap on phones).
   glass: new THREE.MeshPhysicalMaterial({
-    color: '#8ea3b8',
-    metalness: 0,
-    roughness: 0.04,
-    transmission: 0.92,
-    thickness: 0.08,
-    ior: 1.5,
+    color: '#0d1117',
+    metalness: 0.2,
+    roughness: 0.05,
+    clearcoat: 1,
+    clearcoatRoughness: 0.02,
     transparent: true,
-    opacity: 0.85
+    opacity: 0.78,
+    envMapIntensity: 1.4
   }),
   rubber: new THREE.MeshStandardMaterial({ color: '#121212', roughness: 0.92 }),
   trim: new THREE.MeshStandardMaterial({ color: '#0a0a0b', roughness: 0.55, metalness: 0.2 }),
@@ -133,6 +140,11 @@ function buildBody(m) {
     g.add(mesh(new THREE.BoxGeometry(0.07, 0.46, 0.08), m.trim, 'body_pillar_b', [s * 0.79, 1.17, -0.08]));
   });
 
+  // Chrome window line along the beltline.
+  [-1, 1].forEach((s) => {
+    g.add(mesh(new THREE.BoxGeometry(0.03, 0.025, 2.24), m.chrome, `body_trim_${s > 0 ? 'l' : 'r'}`, [s * 0.9, 0.965, -0.18]));
+  });
+
   // Interior: seats + dashboard (seen through the glass).
   [[-0.4, 0.3], [0.4, 0.3], [-0.4, -0.75], [0.4, -0.75]].forEach(([x, z], i) => {
     g.add(mesh(new THREE.BoxGeometry(0.5, 0.12, 0.5), m.interior, `body_interior_seat${i}`, [x, 1.0, z]));
@@ -195,17 +207,30 @@ function buildWheel(m, name, x, z) {
   tire.rotation.y = Math.PI / 2;
   tire.scale.set(1, 1, 1.35);
   g.add(tire);
-  const rim = mesh(new THREE.CylinderGeometry(0.235, 0.235, 0.2, 40), m.chrome, `${name}_rim`);
+  // Polished lip + dark graphite barrel.
+  const lip = mesh(new THREE.TorusGeometry(0.235, 0.014, 12, 64), m.chrome, `${name}_lip`);
+  lip.rotation.y = Math.PI / 2;
+  lip.position.x = side * 0.1;
+  g.add(lip);
+  const rim = mesh(new THREE.CylinderGeometry(0.235, 0.235, 0.2, 48), m.rimPaint, `${name}_rim`);
   rim.rotation.z = Math.PI / 2;
   g.add(rim);
-  const disc = mesh(new THREE.CylinderGeometry(0.17, 0.17, 0.21, 32), m.disc, `${name}_disc`);
+  const disc = mesh(new THREE.CylinderGeometry(0.18, 0.18, 0.02, 40), m.disc, `${name}_disc`);
   disc.rotation.z = Math.PI / 2;
+  disc.position.x = side * 0.06;
   g.add(disc);
-  for (let i = 0; i < 6; i++) {
-    const spoke = mesh(new THREE.BoxGeometry(0.04, 0.2, 0.05), m.chrome, `${name}_spoke${i}`);
-    const a = (i / 6) * Math.PI * 2;
-    spoke.position.set(side * 0.105, Math.cos(a) * 0.11, Math.sin(a) * 0.11);
-    spoke.rotation.x = -a;
+  // Gold brake caliper peeking through the spokes.
+  const caliper = mesh(new THREE.TorusGeometry(0.17, 0.035, 10, 20, Math.PI * 0.45), m.caliper, `${name}_caliper`);
+  caliper.rotation.y = Math.PI / 2;
+  caliper.rotation.x = Math.PI * 0.25;
+  caliper.position.x = side * 0.075;
+  g.add(caliper);
+  // Ten twisted spokes.
+  for (let i = 0; i < 10; i++) {
+    const spoke = mesh(new THREE.BoxGeometry(0.03, 0.2, 0.035), m.chrome, `${name}_spoke${i}`);
+    const a = (i / 10) * Math.PI * 2;
+    spoke.position.set(side * 0.105, Math.cos(a) * 0.12, Math.sin(a) * 0.12);
+    spoke.rotation.set(-a, 0, side * 0.12);
     g.add(spoke);
   }
   const hub = mesh(new THREE.CylinderGeometry(0.045, 0.045, 0.03, 24), m.gold, `${name}_hub`);
@@ -228,6 +253,8 @@ function buildEngine(m) {
   g.add(mesh(new THREE.BoxGeometry(0.3, 0.12, 0.3), m.trim, 'engine_airbox', [-0.6, 0.86, 1.95]));
   const cap = mesh(new THREE.CylinderGeometry(0.055, 0.055, 0.045, 24), m.gold, 'engine_oil_cap', [0.26, 0.99, 1.48]);
   g.add(cap);
+  // Sit the engine low in the bay so the closed hood clears it.
+  g.position.y = -0.14;
   return g;
 }
 
@@ -284,5 +311,36 @@ export function createProceduralCar() {
   const glass = mesh(sideExtrude([[0.94, 0.95], [0.25, 1.39], [-0.86, 1.41], [-1.32, 0.97]], 1.56, 0.05), m.glass, 'glass_cabin');
   glass.castShadow = false;
   car.add(glass);
+  sculpt(car);
   return car;
+}
+
+/**
+ * Turn the boxy extrusions into a car silhouette: the cabin leans inward toward the roof
+ * (tumblehome) and the body narrows toward the nose and tail. Wheels and engine are left as is.
+ */
+function sculpt(car) {
+  car.updateMatrixWorld(true);
+  const toCar = new THREE.Matrix4();
+  const toLocal = new THREE.Matrix4();
+  const v = new THREE.Vector3();
+  car.traverse((o) => {
+    if (!o.isMesh || /^(wheel|engine)/.test(o.name)) return;
+    toCar.copy(o.matrixWorld);
+    toLocal.copy(toCar).invert();
+    const geo = o.geometry.clone();
+    const pos = geo.attributes.position;
+    for (let i = 0; i < pos.count; i++) {
+      v.fromBufferAttribute(pos, i).applyMatrix4(toCar);
+      const plan = 1 - 0.09 * Math.pow(Math.min(Math.abs(v.z) / 2.5, 1), 3);
+      const tumble = 1 - 0.17 * THREE.MathUtils.clamp((v.y - 0.92) / 0.52, 0, 1);
+      v.x *= plan * tumble;
+      // Gentle crown on hood, roof and trunk.
+      if (v.y > 0.8) v.y += 0.025 * (1 - Math.min((v.x / 0.9) ** 2, 1));
+      v.applyMatrix4(toLocal);
+      pos.setXYZ(i, v.x, v.y, v.z);
+    }
+    geo.computeVertexNormals();
+    o.geometry = geo;
+  });
 }

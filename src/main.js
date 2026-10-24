@@ -2,7 +2,7 @@ import './styles/main.css';
 import Lenis from 'lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { applyTranslations, setLang, getLang, onLangChange, t } from './i18n/i18n.js';
+import { applyTranslations, setLang, getLang, onLangChange, t, languages } from './i18n/i18n.js';
 import { contact } from './i18n/translations.js';
 import { featuredProducts, brands, getDescription } from './data/products.js';
 import { initCatalog, orderLink, stats } from './ui/catalog.js';
@@ -70,8 +70,21 @@ function renderContact() {
 
 // ── Header: language toggle, mobile menu, anchor links ─────────────
 function initHeader() {
-  document.getElementById('lang-toggle').addEventListener('click', () => {
-    setLang(getLang() === 'ku' ? 'en' : 'ku');
+  const langSwitch = document.getElementById('lang-switch');
+  const renderLangSwitch = () => {
+    langSwitch.innerHTML = languages
+      .map(
+        (l) =>
+          `<button type="button" lang="${l.htmlLang}" data-lang="${l.code}" aria-pressed="${l.code === getLang()}">${esc(l.label)}</button>`
+      )
+      .join('');
+  };
+  renderLangSwitch();
+  langSwitch.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-lang]');
+    if (!btn) return;
+    setLang(btn.dataset.lang);
+    renderLangSwitch();
     ScrollTrigger.refresh();
   });
   const header = document.querySelector('.site-header');

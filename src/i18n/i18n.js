@@ -1,31 +1,38 @@
-import { translations } from './translations.js';
+import { translations, languages } from './translations.js';
 
 const STORAGE_KEY = 'gb-lang';
 const listeners = new Set();
+const DEFAULT = languages[0].code;
+const isKnown = (code) => languages.some((l) => l.code === code);
 
 function readStoredLang() {
   try {
     const v = localStorage.getItem(STORAGE_KEY);
-    return v === 'en' || v === 'ku' ? v : null;
+    return isKnown(v) ? v : null;
   } catch {
     return null;
   }
 }
 
-let lang = readStoredLang() || 'ku';
+let lang = readStoredLang() || DEFAULT;
 
 export const getLang = () => lang;
+export const getLanguage = () => languages.find((l) => l.code === lang);
 
-/** Translate a key, replacing {placeholders} with values from `vars`. */
+/** Translate a key, replacing {placeholders} with values from `vars`. Falls back to English. */
 export function t(key, vars = {}) {
-  const str = translations[lang][key] ?? translations.ku[key] ?? key;
+  const str = translations[lang][key] ?? translations[DEFAULT][key] ?? key;
   return str.replace(/\{(\w+)\}/g, (_, k) => (vars[k] ?? `{${k}}`));
 }
 
+/** Pick the current language from a { en, ku, ar } object (falls back to English). */
+export const pick = (obj) => (obj && (obj[lang] ?? obj[DEFAULT])) || '';
+
 /** Apply the current language to every [data-i18n] / [data-i18n-placeholder] element. */
 export function applyTranslations(root = document) {
-  document.documentElement.lang = lang === 'ku' ? 'ckb' : 'en';
-  document.documentElement.dir = lang === 'ku' ? 'rtl' : 'ltr';
+  const l = getLanguage();
+  document.documentElement.lang = l.htmlLang;
+  document.documentElement.dir = l.dir;
   document.title = t('meta.title');
 
   root.querySelectorAll('[data-i18n]').forEach((el) => {
@@ -41,6 +48,7 @@ export function applyTranslations(root = document) {
 }
 
 export function setLang(next) {
+  if (!isKnown(next) || next === lang) return;
   lang = next;
   try {
     localStorage.setItem(STORAGE_KEY, next);
@@ -52,3 +60,4 @@ export function setLang(next) {
 }
 
 export const onLangChange = (fn) => listeners.add(fn);
+export { languages };

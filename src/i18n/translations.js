@@ -1,5 +1,5 @@
 /**
- * All interface text of the site, in Kurdish Sorani (ku) and English (en).
+ * All interface text of the site, in English (en, default), Kurdish Sorani (ku) and Arabic (ar).
  * Edit freely — keys are used in index.html (data-i18n="key") and in the JS modules.
  * Product and brand texts live in src/data/products.js.
  * `{name}`-style placeholders are filled in by the code.
@@ -225,13 +225,130 @@ export const translations = {
     'exp.order': 'Order on WhatsApp',
     'exp.orbit': 'Drag to orbit',
     'exp.webglError': 'Your browser does not support WebGL.'
+  },
+
+  ar: {
+    'meta.title': 'Golden Base — زيوت المحركات من أربيل',
+    'loader.text': 'جارٍ تحضير الزيوت…',
+
+    'nav.home': 'الرئيسية',
+    'nav.products': 'المنتجات',
+    'nav.brands': 'العلامات',
+    'nav.about': 'من نحن',
+    'nav.contact': 'تواصل معنا',
+    'nav.experience': 'تجربة تغيير الزيت',
+    'nav.menu': 'القائمة',
+
+    'hero.kicker': 'أربيل، منذ عام 2001',
+    'hero.title': 'ذهب سائل لمحركك',
+    'hero.subtitle': 'توفّر Golden Base زيوت المحركات وزيوت التروس وسوائل ناقل الحركة من أفضل العلامات التجارية في كوردستان والعراق.',
+    'hero.ctaProducts': 'تصفّح المنتجات',
+    'hero.ctaExperience': 'تجربة تغيير الزيت',
+    'hero.scroll': 'مرّر للأسفل',
+    'hero.viscosity': 'اللزوجة',
+    'hero.api': 'API',
+    'hero.size': 'الحجم',
+
+    'brands.kicker': 'علاماتنا التجارية',
+    'brands.title': '{count} علامة تجارية، بمعيار واحد',
+    'brands.text': 'لكل علامة شخصيتها الخاصة. اضغط على أي علامة لعرض منتجاتها.',
+    'brands.house': 'علامة Golden Base',
+    'brands.products': '{count} منتجات',
+
+    'products.kicker': 'متجر الزيوت',
+    'products.title': 'اعثر على الزيت المناسب لمحركك',
+    'products.search': 'ابحث بالدرجة أو الاسم، مثل 20W-50',
+    'products.allBrands': 'كل العلامات',
+    'products.allKinds': 'كل الأنواع',
+    'products.count': '{count} منتج',
+    'products.empty': 'لا توجد منتجات. جرّب فلاتر أخرى.',
+    'products.order': 'اطلب عبر واتساب',
+    'products.orderMessage': 'مرحباً Golden Base، أرغب بطلب هذا المنتج: {name} {viscosity} ({size})',
+    'products.showMore': 'عرض المزيد',
+
+    'kind.engine': 'زيت محرك',
+    'kind.light': 'بنزين حديث',
+    'kind.synthetic': 'تخليقي بالكامل',
+    'kind.diesel': 'ديزل وأحمال ثقيلة',
+    'kind.gear': 'زيت تروس',
+    'kind.atf': 'سائل ناقل الحركة',
+
+    'cta.kicker': 'تجربة ثلاثية الأبعاد',
+    'cta.title': 'غيّر الزيت بنفسك — بتقنية 3D',
+    'cta.text': 'فكّك السيارة، اختر زيتك، اسكبه في المحرك ثم شغّله.',
+    'cta.button': 'ابدأ',
+
+    'about.kicker': 'من نحن',
+    'about.title': 'قصة ذهبية، من أربيل',
+    'about.text': 'انطلقت Golden Base من تجارة زيوت السيارات، وهي اليوم من أبرز موردي زيوت المحركات في إقليم كوردستان. هدفنا أن يحصل كل محرك على الزيت المناسب له.',
+    'about.stat.years': 'سنوات من الخبرة',
+    'about.stat.brands': 'علامة تجارية',
+    'about.stat.products': 'منتج',
+    'about.stat.city': 'أربيل',
+    'about.stat.cityLabel': 'المقر الرئيسي',
+    'about.timeline': 'تاريخنا',
+
+    'timeline.2001.title': 'التأسيس',
+    'timeline.2001.text': 'يدخل السيد صلاح بايز مجال تجارة زيوت السيارات، ويبني سمعة قائمة على الجودة، ويضع الأساس لإرث من التميز يمتد لعقود.',
+    'timeline.2009.title': 'الابتكار',
+    'timeline.2009.text': 'خطوة كبيرة نحو المسؤولية البيئية بتأسيس أول مصنع متخصص لإعادة تكرير الزيوت في أربيل، تأكيداً لالتزامنا بالاستدامة.',
+    'timeline.2016.title': 'محطة فارقة',
+    'timeline.2016.text': 'التأسيس الرسمي لشركة Golden Base، مما نظّم أعمالنا وعزّز مكانتنا كجهة رائدة في قطاع الزيوت في المنطقة.',
+    'timeline.2026.title': 'التحوّل',
+    'timeline.2026.text': 'جيل جديد من القيادة بإدارة السيد برزان صلاح يقود تحديثاً متسارعاً، ويوسّع القدرات ويطبّق عمليات تقنية متقدمة.',
+
+    'contact.kicker': 'تواصل معنا',
+    'contact.title': 'نحن هنا لمساعدتك',
+    'contact.text': 'للطلبات أو الأسعار أو المساعدة في اختيار الزيت المناسب، تواصل معنا.',
+    'contact.phone': 'الهاتف',
+    'contact.whatsapp': 'واتساب',
+    'contact.whatsappCta': 'أرسل رسالة',
+    'contact.callCta': 'اتصل الآن',
+    'contact.location': 'الموقع',
+    'contact.locationValue': 'أربيل، إقليم كوردستان، العراق',
+    'contact.mapCta': 'افتح في الخريطة',
+    'contact.whatsappMessage': 'مرحباً Golden Base، لدي سؤال عن زيوتكم.',
+
+    'footer.rights': '© {year} Golden Base. جميع الحقوق محفوظة.',
+    'footer.tagline': 'زيوت المحركات — أربيل، كوردستان',
+
+    'exp.title': 'تجربة تغيير الزيت',
+    'exp.close': 'إغلاق',
+    'exp.mute': 'كتم الصوت',
+    'exp.unmute': 'تشغيل الصوت',
+    'exp.loading': 'جارٍ تجهيز السيارة…',
+    'exp.step1': 'التفكيك',
+    'exp.step2': 'اختيار الزيت',
+    'exp.step3': 'التركيب',
+    'exp.step4': 'السكب',
+    'exp.step5': 'تشغيل المحرك',
+    'exp.intro': 'قم بتدوير السيارة، ثم فكّكها.',
+    'exp.disassemble': 'فكّ السيارة',
+    'exp.pick': 'اختر زيت محركك',
+    'exp.pickHint': 'اضغط على أي عبوة',
+    'exp.reassembling': 'جارٍ إعادة تركيب السيارة…',
+    'exp.pouring': 'جارٍ سكب {name} في المحرك…',
+    'exp.starting': 'جارٍ تشغيل المحرك…',
+    'exp.final': 'محرّكك محميّ بزيت {name}',
+    'exp.replay': 'إعادة',
+    'exp.another': 'اختر زيتاً آخر',
+    'exp.order': 'اطلبه عبر واتساب',
+    'exp.orbit': 'اسحب للتدوير',
+    'exp.webglError': 'متصفحك لا يدعم WebGL.'
   }
 };
+
+/** Languages offered in the switcher (first = default). `dir` sets the page direction. */
+export const languages = [
+  { code: 'en', label: 'EN', htmlLang: 'en', dir: 'ltr' },
+  { code: 'ku', label: 'کوردی', htmlLang: 'ckb', dir: 'rtl' },
+  { code: 'ar', label: 'عربي', htmlLang: 'ar', dir: 'rtl' }
+];
 
 /** Company contact details — used by the contact section, buttons and WhatsApp links. */
 export const contact = {
   phoneDisplay: '0750 444 4258',
   phoneInternational: '+9647504444258',
   whatsapp: '9647504444258',
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Erbil'
+  mapsUrl: 'https://maps.app.goo.gl/K3DfYTECHSyJPD7p8'
 };

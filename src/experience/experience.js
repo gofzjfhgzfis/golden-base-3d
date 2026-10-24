@@ -45,11 +45,13 @@ export async function createExperience(root) {
   scene.background = new THREE.Color('#09090b');
   scene.fog = new THREE.Fog('#09090b', 12, 26);
   scene.environment = await getEnvironment(renderer);
-  scene.environmentIntensity = 0.85;
+  scene.environmentIntensity = 0.42;
 
   const camera = new THREE.PerspectiveCamera(isMobile() ? 48 : 36, 1, 0.1, 80);
   const homeCam = new THREE.Vector3(6.2, 2.5, 7.4).multiplyScalar(isMobile() ? 1.15 : 1);
   camera.position.copy(homeCam);
+  // No bloom here: glossy paint under studio strips would bloom everywhere; the lights get halo sprites instead.
+  const pipeline = { render: () => renderer.render(scene, camera), setSize() {} };
   const controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true;
   controls.enablePan = false;
@@ -68,7 +70,7 @@ export async function createExperience(root) {
   // Floor, soft contact shadow and a gold ring.
   const floor = new THREE.Mesh(
     new THREE.CircleGeometry(16, 64),
-    new THREE.MeshStandardMaterial({ color: '#0b0b0d', roughness: 0.62, metalness: 0.15, envMapIntensity: 0.35 })
+    new THREE.MeshStandardMaterial({ color: '#09090b', roughness: 0.78, metalness: 0.05, envMapIntensity: 0.12 })
   );
   floor.rotation.x = -Math.PI / 2;
   floor.receiveShadow = true;
@@ -94,8 +96,8 @@ export async function createExperience(root) {
   ring.position.y = 0.005;
   scene.add(ring);
 
-  scene.add(new THREE.HemisphereLight('#ffffff', '#1a1408', 0.35));
-  const key = new THREE.DirectionalLight('#ffffff', 1.7);
+  scene.add(new THREE.HemisphereLight('#ffffff', '#1a1408', 0.12));
+  const key = new THREE.DirectionalLight('#ffffff', 0.9);
   key.position.set(3, 7, 4);
   key.castShadow = true;
   key.shadow.mapSize.setScalar(isMobile() ? 1024 : 2048);
@@ -103,7 +105,7 @@ export async function createExperience(root) {
   key.shadow.radius = 6;
   key.shadow.bias = -0.0004;
   scene.add(key);
-  const rim = new THREE.DirectionalLight('#E6C27A', 1.6);
+  const rim = new THREE.DirectionalLight('#E6C27A', 0.9);
   rim.position.set(-5, 3, -5);
   scene.add(rim);
 
@@ -150,6 +152,35 @@ export async function createExperience(root) {
   scene.add(tailGlow);
   const capGlow = new THREE.PointLight('#F2C14E', 0, 2.2, 2);
   scene.add(capGlow);
+
+  // Soft glow halos on every headlight / taillight, attached so they follow the parts.
+  const glowTexture = (inner, outer) => {
+    const c = document.createElement('canvas');
+    c.width = c.height = 128;
+    const g = c.getContext('2d');
+    const grad = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+    grad.addColorStop(0, inner);
+    grad.addColorStop(0.25, outer);
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    g.fillStyle = grad;
+    g.fillRect(0, 0, 128, 128);
+    const tex = new THREE.CanvasTexture(c);
+    tex.colorSpace = THREE.SRGBColorSpace;
+    return tex;
+  };
+  const halos = [];
+  const addHalos = (meshes, tex, size) =>
+    meshes.forEach((m) => {
+      const sprite = new THREE.Sprite(
+        new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending })
+      );
+      const ws = m.getWorldScale(new THREE.Vector3());
+      sprite.scale.set(size / ws.x, size / ws.y, 1);
+      m.add(sprite);
+      halos.push(sprite);
+    });
+  addHalos(parts.lightsFront, glowTexture('rgba(255,255,255,1)', 'rgba(255,240,210,0.45)'), 1.1);
+  addHalos(parts.lightsRear, glowTexture('rgba(255,90,90,1)', 'rgba(255,20,40,0.45)'), 0.7);
 
   const stream = new OilStream(scene);
   const splash = new Splash(scene);
@@ -247,7 +278,7 @@ export async function createExperience(root) {
     const color = new THREE.Color(oilColors[p.kind] || oilColors.engine);
     const cap = parts.oilCapWorld();
     setStatus('exp.pouring', { name: productTitle(p) });
-    moveCamera(cap.clone().add(new THREE.Vector3(2.4, 1.35, 0.9)), cap.clone().add(new THREE.Vector3(0, 0.25, 0)), 1.4);
+    moveCamera(cap.clone().add(new THREE.Vector3(2.9, 1.7, 1.7)), cap.clone().add(new THREE.Vector3(0, 0.3, 0)), 1.4);
     await track(setHood(parts, true));
 
     // Open the oil filler cap.
@@ -340,6 +371,7 @@ export async function createExperience(root) {
     tailMats.forEach((m) => (m.emissiveIntensity = 3.5 * k));
     beamSpots.forEach((s) => (s.intensity = 70 * k));
     tailGlow.intensity = 2.5 * k;
+    halos.forEach((h) => (h.material.opacity = 0.9 * k));
   }
 
   function stopEngine() {
@@ -423,13 +455,13 @@ export async function createExperience(root) {
     timer.update(now);
     const dt = Math.min(timer.getDelta(), 0.05);
     const time = timer.getElapsed();
-    fitToCanvas(renderer, camera);
+    fitToCanvas(renderer, camera, pipeline);
     controls.update();
     carWrap.position.y = vibration * (Math.sin(time * 58) * 0.6 + (Math.random() - 0.5) * 0.8);
     carWrap.rotation.z = vibration * 0.5 * Math.sin(time * 37);
     splash.tick(dt);
     smoke.tick(dt);
-    renderer.render(scene, camera);
+    pipeline.render();
   }
 
   function reset() {

@@ -335,19 +335,33 @@ html[dir='rtl'] [dir='ltr'] {
   gap: 10px;
 }
 
-.lang-toggle {
-  min-width: 64px;
-  height: 38px;
-  padding: 0 12px;
+.lang-switch {
+  display: flex;
+  padding: 3px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.04);
-  font-weight: 700;
-  font-size: 14px;
 }
 
-.lang-toggle:hover {
-  border-color: var(--gold);
+.lang-switch button {
+  height: 32px;
+  padding: 0 11px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 13px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.lang-switch button:hover {
+  color: var(--text);
+}
+
+.lang-switch button[aria-pressed='true'] {
+  background: var(--gold);
+  color: #120e05;
 }
 
 .menu-toggle {
