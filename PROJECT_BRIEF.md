@@ -51,7 +51,7 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Nine product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
+Ten product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
@@ -61,6 +61,7 @@ Nine product brands so far, each with its own photo folder (white background, fr
 - **LONA Lubricants** → `assets/products/lona/`
 - **Sea Ghost Lubricants** → `assets/products/sea-ghost/`
 - **MAX-X Lubricants** → `assets/products/max-x/`
+- **Deluxe Lubricants** → `assets/products/deluxe/`
 
 ### Brand 1 — AGDILCO
 
@@ -114,7 +115,7 @@ Label slogans: "One oil multi solutions", "You can race not just drive", "With t
 | 17 | Engine Oil | 20W-50 | SL/CH-4 | 1 L | bottle | Blue, black/red label | `rouge/20w50-1l-blue.webp` |
 | 18 | Engine Oil | 15W-40 | SL/CF-4 | 1 L | bottle | Orange, yellow/white label | `rouge/15w40-1l-orange.webp` |
 
-Note: Rouge labels carry third-party marks (an "Auto Bild" magazine badge, a "deLuxe" badge) and the diesel label shows a truck. Keep these out of site text; photos only shown small.
+Note: Rouge labels carry an "Auto Bild" magazine badge (third-party) and a "deLuxe" badge (Deluxe is one of our own brands, see Brand 10 — fine to show) and the diesel label shows a truck. Keep these out of site text; photos only shown small.
 
 ### Brand 4 — F-HORSE Lubricants
 
@@ -162,7 +163,7 @@ Label: "RACING OIL", "Motor Engine Oil", "5000 KM — keep your engine clean", "
 | 28 | Racing Oil | 10W-30 | SL/CF | 5 L | jug | Gold/orange | `rk-star/10w30-5l-gold.webp` |
 | 29 | Racing Oil | 20W-50 | SL/CF | 5 L | jug | Silver | `rk-star/20w50-5l-silver.webp` |
 
-Note: labels carry a third-party "deluxe" badge — keep out of site text.
+Note: labels carry a "deluxe" badge — Deluxe is one of our own brands (Brand 10), so it is fine.
 
 ### Brand 7 — LONA Lubricants
 
@@ -221,6 +222,24 @@ Label: logo "SYNTHETIC MAX-X" in red on a white oval with red ring; brushed-meta
 | 44 | Gear Oil "Smooth Drive" | SAE 90 | GL-4 & GL-5 | 1 L | bottle | Lime green, green label | `max-x/sae90-gear-1l.webp` |
 
 Note: #40 (15W-40 Premium 4000) small print is garbled ("MOTOR BIL", "BNTFOL") — looks AI-generated; ask for a real photo. Big text (MAX-X, 15W40, Premium 4000, 1L) is fine.
+
+### Brand 10 — Deluxe Lubricants (deluxe lube)
+
+Brand description (from the user):
+> Deluxe Lubricants are engineered with German technology to deliver superior protection, extended engine life, and reliable performance for both gasoline and diesel engines. Built for durability under demanding conditions, Deluxe ensures cleaner combustion, enhanced lubrication stability, and long-lasting engine efficiency.
+
+Specs given: Viscosity 15W-40 / 20W-50 / HD-70 · API: SL/CF / CF-4 · Compatibility: Gasoline & Diesel · Oil type: Fully Synthetic / Multi Type Engine Oil · Technology: German Technology · Packaging: 5 L
+Label: "Fully Synthetic Motor Engine Oil", "High Quality · High Performance", "Multi Type Engine", "longlife Performance", "German Technology", German-flag color stripes and an eagle emblem. Jug: squared jerrycan shape, top handle + side handle, ribbed edge.
+Relation: the "deluxe" badge also appears on Rouge and RK STAR labels — likely the same producer/family.
+
+| # | Product | Grade | API | Size | Jug color / label | Image | Status |
+|---|---------|-------|-----|------|-------------------|-------|--------|
+| 45 | Fully Synthetic Diesel | HD-70 | CF-4 | 5 L | Blue, gold label | `deluxe/hd70-diesel-5l-blue.webp` | OK |
+| 46 | Fully Synthetic | 15W-40 | SL/CF | 5 L | Silver, copper/pink label | `deluxe/15w40-5l-silver-copper-label.webp` | OK |
+| 47 | Fully Synthetic | 15W-40 | SL/CF | 5 L | Silver, black label (mirrored layout) | `deluxe/15w40-5l-silver-black-label.webp` | ⚠ small text garbled (looks AI-generated); second 15W-40 — old/new label? |
+| 48 | Fully Synthetic | 20W-50 | SL/CF | 5 L | Red, gold label | `deluxe/20w50-5l-red.webp` | OK |
+
+Notes: the eagle on the label resembles the German state emblem — don't reuse it as site artwork. Two 15W-40 labels — ask which is current (or show both as label variants of one product).
 
 Open questions for the user:
 - Is MAX-X Golden Base's own/flagship brand (hero of the site) and the other 8 brands distributed products?
