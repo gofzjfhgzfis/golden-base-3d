@@ -51,7 +51,7 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Thirteen product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
+Fourteen product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
@@ -65,6 +65,7 @@ Thirteen product brands so far, each with its own photo folder (white background
 - **FAST Lube** → `assets/products/fast-lube/`
 - **Michel Lubricant** → `assets/products/michel/`
 - **MOIL Lubricants** → `assets/products/moil/`
+- **HUSTON Lubricants** → `assets/products/huston/`
 
 ### Brand 1 — AGDILCO
 
@@ -286,6 +287,20 @@ Label: "Motor Engine Oil with Ultra Pure Technology", "Manufactured with highest
 | 54 | Ultra Pure (diesel) | HD-70 | CF-4 | 5 L | Silver, red accent | `moil/hd70-5l-silver.webp` |
 
 Notes: labels show a "dexos" mark (a car maker's trademark) and an "Auto Top" badge — keep out of site text. Label lines "ILSAC GF-6" on HD-70 and "ILSAC CF-6" on 20W-50 look inconsistent — on the site show only the API values the user gave (SL, SL/CF, CF-4).
+
+### Brand 14 — HUSTON Lubricants ("USA american")
+
+Brand description (from the user):
+> HUSTON Lubricants are formulated with advanced additive technology to deliver premium engine protection, stable viscosity, and high-performance lubrication. Designed for both gasoline and diesel engines, HUSTON ensures engine cleanliness, smoother performance, and extended durability in demanding conditions.
+
+Specs given: Viscosity 10W-30 / 20W-50 / HD-70 · API SL/CF / CI-4 · Technology: Premium Additive Formula · Petrol & Diesel · 5 L
+Label: "USA american HUSTON Lubricants", "Premium Performance Engine Oil". Each grade has a line name: SILVER / TERKLAZ / WHITE. Artwork: golden piston on a golden oil wave (fits the Golden Base gold theme very well). Jug: angular, diagonal ribs on the sides, side grip window.
+
+| # | Line | Grade | API | Size | Jug color / label | Image |
+|---|------|-------|-----|------|-------------------|-------|
+| 55 | Terklaz | 10W-30 | SL/CF | 5 L | Orange, turquoise label | `huston/terklaz-10w30-5l.webp` |
+| 56 | Silver | 20W-50 | SL/CF | 5 L | Silver, grey label | `huston/silver-20w50-5l.webp` |
+| 57 | White | HD-70 | CI-4 | 5 L | Blue, white label | `huston/white-hd70-5l.webp` |
 
 Open questions for the user:
 - Is MAX-X Golden Base's own/flagship brand (hero of the site) and the other 8 brands distributed products?
