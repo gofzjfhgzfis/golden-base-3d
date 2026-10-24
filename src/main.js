@@ -40,10 +40,11 @@ function renderHeroPanels() {
       (p, i) => `<article class="hero-product" style="--accent:${p.accent}">
         <span class="hp-index" dir="ltr">${String(i + 1).padStart(2, '0')} / ${String(n).padStart(2, '0')}</span>
         <span class="hp-brand" dir="ltr">${esc(brands[p.brand].name)}</span>
-        <h2 class="hp-name" dir="ltr">${esc(p.name)}</h2>
+        <h2 class="hp-name">${esc(t(`kind.${p.kind}`))}</h2>
         <div class="hp-grade" dir="ltr">${esc(p.viscosity)}</div>
         <p class="hp-desc">${esc(getDescription(p, lang))}</p>
         <dl class="hp-specs">
+          <div><dt>${esc(t('hero.series'))}</dt><dd dir="ltr">${esc(p.name)}</dd></div>
           <div><dt>${esc(t('hero.viscosity'))}</dt><dd dir="ltr">${esc(p.viscosity)}</dd></div>
           <div><dt>${esc(t('hero.api'))}</dt><dd dir="ltr">${esc(p.api)}</dd></div>
           ${p.size ? `<div><dt>${esc(t('hero.size'))}</dt><dd dir="ltr">${esc(p.size)}</dd></div>` : ''}

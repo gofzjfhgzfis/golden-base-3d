@@ -27,6 +27,7 @@ export const translations = {
     'hero.viscosity': 'پلەی لینجی',
     'hero.api': 'API',
     'hero.size': 'قەبارە',
+    'hero.series': 'زنجیرە',
 
     'brands.kicker': 'براندەکانمان',
     'brands.title': '{count} براند، یەک ستاندارد',
@@ -138,6 +139,7 @@ export const translations = {
     'hero.viscosity': 'Viscosity',
     'hero.api': 'API',
     'hero.size': 'Size',
+    'hero.series': 'Series',
 
     'brands.kicker': 'Our brands',
     'brands.title': '{count} brands, one standard',
@@ -248,6 +250,7 @@ export const translations = {
     'hero.viscosity': 'اللزوجة',
     'hero.api': 'API',
     'hero.size': 'الحجم',
+    'hero.series': 'السلسلة',
 
     'brands.kicker': 'علاماتنا التجارية',
     'brands.title': '{count} علامة تجارية، بمعيار واحد',
