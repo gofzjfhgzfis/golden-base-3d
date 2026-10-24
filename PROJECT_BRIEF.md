@@ -51,7 +51,7 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Twelve product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
+Thirteen product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
@@ -64,6 +64,7 @@ Twelve product brands so far, each with its own photo folder (white background, 
 - **Deluxe Lubricants** → `assets/products/deluxe/`
 - **FAST Lube** → `assets/products/fast-lube/`
 - **Michel Lubricant** → `assets/products/michel/`
+- **MOIL Lubricants** → `assets/products/moil/`
 
 ### Brand 1 — AGDILCO
 
@@ -269,6 +270,22 @@ Label: product line "POSIDON XR", "Engine Oil", "Multi Guard Technology", "Synth
 |---|---------|-------|-----|------|-----------|-------|
 | 50 | Posidon XR Synthetic Blend | 15W-40 | SL/CF | 5 L | Orange | `michel/posidon-xr-15w40-5l.png` |
 | 51 | Posidon XR Synthetic Blend | 20W-50 | SL/CF | 5 L | Orange | `michel/posidon-xr-20w50-5l.png` |
+
+### Brand 13 — MOIL Lubricants
+
+Brand description (from the user):
+> MOIL Lubricants are engineered to deliver premium engine protection with advanced European additive technology. Designed for high-mileage engines, MOIL ensures reliable lubrication, cleaner performance, and extended engine life under daily and demanding driving conditions.
+
+Specs given: Viscosity 10W-30 / 20W-50 / HD-70 · API SL / CF / CF-4 · Technology: Ultra Pure Additive Formula · Mileage: up to 5000 KM · Packaging: 5 L
+Label: "Motor Engine Oil with Ultra Pure Technology", "Manufactured with highest European additives", "Premium Performance Engine Oil", "High Mileage 5000 KM", "Export Quality". Pixel-block "MOIL" logo. Jug: tall, bridge handle, side grip window, ribbed lower edge. Accent color matches jug (blue / red / silver-red).
+
+| # | Product | Grade | API | Size | Jug color / accent | Image |
+|---|---------|-------|-----|------|--------------------|-------|
+| 52 | Ultra Pure | 10W-30 | SL | 5 L | Blue, blue accent | `moil/10w30-5l-blue.webp` |
+| 53 | Ultra Pure | 20W-50 | SL/CF | 5 L | Red, orange accent | `moil/20w50-5l-red.webp` |
+| 54 | Ultra Pure (diesel) | HD-70 | CF-4 | 5 L | Silver, red accent | `moil/hd70-5l-silver.webp` |
+
+Notes: labels show a "dexos" mark (a car maker's trademark) and an "Auto Top" badge — keep out of site text. Label lines "ILSAC GF-6" on HD-70 and "ILSAC CF-6" on 20W-50 look inconsistent — on the site show only the API values the user gave (SL, SL/CF, CF-4).
 
 Open questions for the user:
 - Is MAX-X Golden Base's own/flagship brand (hero of the site) and the other 8 brands distributed products?
