@@ -51,11 +51,12 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Four product brands so far, each with its own photo folder (white background, front view):
+Five product brands so far, each with its own photo folder (white background, front view):
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
 - **F-HORSE** → `assets/products/f-horse/`
+- **AROL Automotive** → `assets/products/arol/`
 
 ### Brand 1 — AGDILCO
 
@@ -128,6 +129,21 @@ Label: "PREMIUM", slogan "New Technology Same Power", "Specially made for Middle
 | 23 | Premium ATF III | Dexron III | — | 1 L | bottle | Red, black racing label | `f-horse/atf3-1l-red.webp` |
 
 Note: "DEXRON" is a third-party (car maker) trademark. On the site, write the spec as "ATF III (Dexron III spec)" at most, or just "ATF III" — confirm with the user.
+
+### Brand 5 — AROL Automotive
+
+Brand description (from the user):
+> AROL Automotive lubricants are engineered to deliver reliable protection and performance for both gasoline and diesel engines. With advanced additive technology and multigrade formulations, AROL ensures smoother engine operation, enhanced wear protection, and long-lasting durability under varying driving conditions.
+
+Specs given: Product range 10W-30 / 15W-40 / 20W-50 / SAE-50 · API: SL/CF / SN/CF / CH-4 · Oil type: Multigrade Universal Motor Oil · Sizes: 4L / 5L
+Label: product line "SUPERTECH", "Multigrade Universal Motor Oil", car + bus icons. Orange/yellow swoosh over black label; all products are jugs with a rounded handle and ribbed side neck.
+
+| # | Product | Grade | API | Size | Container | Jug color / cap | Image |
+|---|---------|-------|-----|------|-----------|-----------------|-------|
+| 24 | Supertech | 10W-30 | SN/CF | 5 L | jug | Gold/orange, black cap | `arol/10w30-5l-gold.webp` |
+| 25 | Supertech | 15W-40 | SL/CF | 4 L | jug | Silver, yellow cap | `arol/15w40-4l-silver.webp` |
+| 26 | Supertech | 20W-50 | SL/CF | 5 L | jug | Silver, yellow cap | `arol/20w50-5l-silver.webp` |
+| 27 | Supertech | SAE 50 | CH-4 | 5 L | jug | Blue, black cap | `arol/sae50-5l-blue.webp` |
 
 Open questions for the user:
 - More brands coming? (User is sending products brand by brand.)
