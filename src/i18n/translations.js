@@ -85,7 +85,7 @@ export const translations = {
     'contact.whatsappCta': 'نامە بنێرە',
     'contact.callCta': 'پەیوەندی بکە',
     'contact.location': 'شوێن',
-    'contact.locationValue': 'هەولێر، هەرێمی کوردستان',
+    'contact.locationValue': 'ڕێگای کۆیە-هەولێر، هەولێر',
     'contact.mapCta': 'لە نەخشە ببینە',
     'contact.whatsappMessage': 'سڵاو Golden Base، پرسیارێکم هەیە دەربارەی ڕۆنەکانتان.',
 
@@ -197,7 +197,7 @@ export const translations = {
     'contact.whatsappCta': 'Send a message',
     'contact.callCta': 'Call now',
     'contact.location': 'Location',
-    'contact.locationValue': 'Erbil, Kurdistan Region, Iraq',
+    'contact.locationValue': 'Erbil–Koya Road, Erbil, Kurdistan Region',
     'contact.mapCta': 'Open in Maps',
     'contact.whatsappMessage': 'Hello Golden Base, I have a question about your oils.',
 
@@ -308,7 +308,7 @@ export const translations = {
     'contact.whatsappCta': 'أرسل رسالة',
     'contact.callCta': 'اتصل الآن',
     'contact.location': 'الموقع',
-    'contact.locationValue': 'أربيل، إقليم كوردستان، العراق',
+    'contact.locationValue': 'طريق أربيل–كويه، أربيل، إقليم كوردستان',
     'contact.mapCta': 'افتح في الخريطة',
     'contact.whatsappMessage': 'مرحباً Golden Base، لدي سؤال عن زيوتكم.',
 
