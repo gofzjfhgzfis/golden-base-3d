@@ -49,6 +49,19 @@ Sequence:
 
 ---
 
+## Company history — for the About section (received 2026-10-24)
+
+Timeline from the user (year read as the label of the milestone it follows — confirm):
+
+| Year | Title | Text (from the user) |
+|------|-------|----------------------|
+| 2001 | The Foundation | Mr. Salah Bayaz enters the automotive lubricants trade, establishing a reputation for quality and laying the groundwork for a decades-long legacy of excellence. |
+| 2009 | The Innovation | A major leap in environmental responsibility with the establishment of the first specialized re-refining plant in Erbil, marking our commitment to sustainability. |
+| 2016 | The Milestone | Official establishment of Golden Base Company, formalizing our operations and strengthening our position as a leading entity in the regional oil industry. |
+| 2026 | The Transformation | A new generation of leadership under Mr. Barzan Salah drives aggressive modernization, expanding capabilities and implementing advanced technological processes. |
+
+Design idea: a scroll-driven timeline (a golden oil line "pours" down the page and fills each year node as you scroll; 25+ years of experience counter). Kurdish translations still needed.
+
 ## Products (received 2026-10-24)
 
 Sixteen product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
