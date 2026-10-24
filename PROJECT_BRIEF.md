@@ -51,7 +51,7 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Eleven product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
+Twelve product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
@@ -63,6 +63,7 @@ Eleven product brands so far, each with its own photo folder (white background, 
 - **MAX-X Lubricants** → `assets/products/max-x/`
 - **Deluxe Lubricants** → `assets/products/deluxe/`
 - **FAST Lube** → `assets/products/fast-lube/`
+- **Michel Lubricant** → `assets/products/michel/`
 
 ### Brand 1 — AGDILCO
 
@@ -255,6 +256,19 @@ Label: "FAST LUBE", sub-line **"GOLDEN BASE — More Mileage"** (the company nam
 | 49 | FAST Lube Multi Grade | 20W-50 | SL/CF | 5 L | Silver, red/black label | `fast-lube/20w50-5l-silver.webp` |
 
 Note: the pickup on the label looks like a real production model — the brief forbids real car brands, so show this photo small only; never reuse the truck as site artwork.
+
+### Brand 12 — Michel Lubricant
+
+Brand description (from the user):
+> Michel Lubricant is developed to provide dependable engine protection and long-lasting performance under daily and heavy-duty driving conditions. Built with synthetic blend technology, Michel oils help reduce friction, improve engine cleanliness, and maintain stable lubrication across a wide temperature range.
+
+Specs given: Viscosity 15W-40 / 20W-50 · API SL/CF · Synthetic Blend · Petrol & Diesel · 5 L
+Label: product line "POSIDON XR", "Engine Oil", "Multi Guard Technology", "Synthetic Blend", "Premium Quality"; also ACEA A3/B4 in small print. Brushed-steel + orange label. Jug: orange, translucent cap, angled handle with ribbed grip; "Michel Oil" embossed on the handle. PNG photos (transparent/clean background).
+
+| # | Product | Grade | API | Size | Jug color | Image |
+|---|---------|-------|-----|------|-----------|-------|
+| 50 | Posidon XR Synthetic Blend | 15W-40 | SL/CF | 5 L | Orange | `michel/posidon-xr-15w40-5l.png` |
+| 51 | Posidon XR Synthetic Blend | 20W-50 | SL/CF | 5 L | Orange | `michel/posidon-xr-20w50-5l.png` |
 
 Open questions for the user:
 - Is MAX-X Golden Base's own/flagship brand (hero of the site) and the other 8 brands distributed products?
