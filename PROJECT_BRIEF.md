@@ -51,7 +51,7 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Seven product brands so far, each with its own photo folder (white background, front view):
+Eight product brands so far, each with its own photo folder (white background, front view):
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
@@ -59,6 +59,7 @@ Seven product brands so far, each with its own photo folder (white background, f
 - **AROL Automotive** → `assets/products/arol/`
 - **RK STAR Automotive** → `assets/products/rk-star/`
 - **LONA Lubricants** → `assets/products/lona/`
+- **Sea Ghost Lubricants** → `assets/products/sea-ghost/`
 
 ### Brand 1 — AGDILCO
 
@@ -179,6 +180,27 @@ Label: product line "BLACK POWER", slogan "Power to Control", "New Technology Ex
 | 34 | Black Power Gear Oil | SAE 140 | GL-1 | 1 L | bottle | Lime green | `lona/sae140-gl1-1l-green.webp` |
 
 Note: the SAE 140 photo is lower quality (blurry label text) than the others — ask for a better photo if available.
+
+### Brand 8 — Sea Ghost Lubricants
+
+Brand description (from the user):
+> Sea Ghost Lubricants delivers reliable engine protection for gasoline and diesel engines using advanced synthetic technology and premium European additive formulations. Built for durability, engine cleanliness, and high performance under different driving conditions, Sea Ghost ensures stable lubrication and long-lasting engine efficiency.
+
+Specs given: Viscosity 10W-30 / 20W-50 / SAE-50 · API: SL/CF, CH-4 · Technology: Synthetic Technology Blend · Engine: Gasoline & Diesel · Additives: European
+Label: "Clean · Strong · Power", "With the best European additives". Logo: swirl/drop mark. Jug: rounded, large curved handle, diagonal ribs on the side; "SEA GHOST" embossed near the cap.
+
+| # | Product | Grade | API | Size | Jug color | Image | Status |
+|---|---------|-------|-----|------|-----------|-------|--------|
+| 35 | Sea Ghost | 10W-30 | SL/CF | not stated (≈4–5 L) | Dark teal | `sea-ghost/10w30-teal.webp` | OK, clear |
+| 36 | Sea Ghost? | 20W-50 | SL/CF | not stated | Yellow, green label | `sea-ghost/20w50-yellow-albastar-label.webp` | ⚠ label says **ALBA STAR**, not Sea Ghost |
+| 37 | Sea Ghost | probably SAE 50 — CONFIRM | CH-4 | not stated | Black | `sea-ghost/unclear-ch4-black.webp` | ⚠ label text is garbled (looks AI-generated: "TAE FS", "APFCH-4") |
+| 38 | Sea Ghost | unclear — CONFIRM | CH-4 | not stated | Yellow, red label | `sea-ghost/unclear-ch4-yellow-red.webp` | ⚠ garbled text, very small/low-res image |
+
+Open questions for the user (Sea Ghost):
+- Is the yellow 20W-50 jug Sea Ghost or a separate brand "Alba Star"?
+- Which jug is SAE 50 — black or yellow/red? What is the other one?
+- Sizes (4 L / 5 L?) for all four.
+- Better (real) photos for #37 and #38 if available; the current ones have unreadable/invented label text.
 
 Open questions for the user:
 - More brands coming? (User is sending products brand by brand.)
