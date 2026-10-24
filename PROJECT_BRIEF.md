@@ -51,7 +51,11 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Brand on the bottles: **AGDILCO**. Product photos (white background, front view) are in `assets/products/`.
+Two product brands so far, each with its own photo folder (white background, front view):
+- **AGDILCO** → `assets/products/agdilco/`
+- **Dallas UK** → `assets/products/dallas/`
+
+### Brand 1 — AGDILCO
 
 Brand description (from the user):
 > AGDILCO Lubricants are high-performance synthetic blend motor oils and transmission fluids formulated to provide excellent oxidation stability, superior wear protection, and smooth engine performance. Designed for both gasoline and diesel engines, AGDILCO ensures reliable lubrication under demanding driving conditions while extending engine life and maintaining efficiency.
@@ -60,15 +64,35 @@ Specs given: Product range 10W40 / SAE 40 / ATF Type III (H) · Oil type: Synthe
 
 | # | Product | Grade | API | Size | Bottle color | Image |
 |---|---------|-------|-----|------|--------------|-------|
-| 1 | Multi Type Engine Lube (Gasoline & Diesel) | 10W-40 | SL/CF | 1 qt (946 mL) | Gold / orange, gold label, black cap | `engine-lube-10w40-gold.webp` |
-| 2 | Multi Type Engine Lube (Gasoline & Diesel) | SAE 40 | SL/CF | 1 qt (946 mL) | Blue, blue label, black cap | `engine-lube-sae40-blue.webp` |
-| 3 | Automatic Transmission Fluid | Type III (H) | — | 1 qt (946 mL) | Red, blue label, black cap | `atf-type3-red.webp` |
-| 4 | Automatic Transmission Fluid | Type III (H) | — | 1 qt (946 mL) | Black, blue label, black cap | `atf-type3-black.webp` |
-| 5 | Synthetic Blend Motor Oil (jug) | label seal looks like 5W-30 — CONFIRM | SN | jug, size not stated — CONFIRM | Red jug, red/black label | `synthetic-blend-jug-red-black.webp` |
-| 6 | Synthetic Blend Motor Oil (jug) | label seal looks like 5W-30 — CONFIRM | SL/CF | jug, size not stated — CONFIRM | Red jug, yellow/black label | `synthetic-blend-jug-red-yellow.webp` |
+| 1 | Multi Type Engine Lube (Gasoline & Diesel) | 10W-40 | SL/CF | 1 qt (946 mL) | Gold / orange, gold label, black cap | `agdilco/engine-lube-10w40-gold.webp` |
+| 2 | Multi Type Engine Lube (Gasoline & Diesel) | SAE 40 | SL/CF | 1 qt (946 mL) | Blue, blue label, black cap | `agdilco/engine-lube-sae40-blue.webp` |
+| 3 | Automatic Transmission Fluid | Type III (H) | — | 1 qt (946 mL) | Red, blue label, black cap | `agdilco/atf-type3-red.webp` |
+| 4 | Automatic Transmission Fluid | Type III (H) | — | 1 qt (946 mL) | Black, blue label, black cap | `agdilco/atf-type3-black.webp` |
+| 5 | Synthetic Blend Motor Oil (jug) | label seal looks like 5W-30 — CONFIRM | SN | jug, size not stated — CONFIRM | Red jug, red/black label | `agdilco/synthetic-blend-jug-red-black.webp` |
+| 6 | Synthetic Blend Motor Oil (jug) | label seal looks like 5W-30 — CONFIRM | SL/CF | jug, size not stated — CONFIRM | Red jug, yellow/black label | `agdilco/synthetic-blend-jug-red-yellow.webp` |
+
+### Brand 2 — Dallas UK
+
+Brand description (from the user):
+> Dallas UK Lubricants are advanced multi-type engine and transmission oils engineered for superior engine protection, smooth performance, and long-lasting reliability. Formulated with British technology and premium additives, Dallas UK delivers enhanced wear protection, cleaner engines, and excellent thermal stability for gasoline, diesel, and automatic transmission systems.
+
+Specs given: Product range 10W30 / 10W40 / 15W40 / 20W50 / ATF III · API: SN/CF / ATF III · Technology: British Technology Formula · Sizes: 1L / 4L
+Label tagline: "We Created For You". Labels say "ADVANCED", "multi type engine oil".
+
+| # | Product | Grade | API | Size | Container | Bottle color / label | Image |
+|---|---------|-------|-----|------|-----------|----------------------|-------|
+| 7 | Multi Type Engine Oil | 10W-30 | SN/CF | 4 L | jug | Blue, black/magenta label | `dallas/10w30-4l-blue.webp` |
+| 8 | Multi Type Engine Oil | 10W-40 | SN/CF | 1 L | bottle | Gold/orange, black/blue label | `dallas/10w40-1l-gold.webp` |
+| 9 | Multi Type Engine Oil | 15W-40 | SN/CF | 4 L | jug | Silver, black/red label | `dallas/15w40-4l-silver.webp` |
+| 10 | Multi Type Engine Oil | 20W-50 | SN/CF | 4 L | jug | Red, black/yellow label | `dallas/20w50-4l-red.webp` |
+| 11 | Multi Type Engine Oil | 20W-50 | SN/CF | 1 L | bottle | Blue, black/yellow label | `dallas/20w50-1l-blue.webp` |
+| 12 | Transmission Fluid | ATF III | — | 1 L | bottle | Red, black/red label | `dallas/atf3-1l-red.webp` |
+
+Note: the ATF III label small print lists OEM/spec approvals (e.g. MERCON, MAN, ZF, Voith, Allison). Keep these out of site text; photos only shown small.
 
 Open questions for the user:
-- Brand naming: site is for "Golden Base" / MAX-X, bottles say AGDILCO. Is Golden Base the distributor of AGDILCO? How should both names appear?
+- More brands coming? (User is sending products brand by brand.)
+- Brand naming: site is for "Golden Base" / MAX-X, bottles say AGDILCO and Dallas UK. Is Golden Base the distributor of these brands? Is MAX-X a third brand (products not sent yet)? How should the names appear?
 - Jug products (5, 6): exact viscosity and size (e.g. 4 L / 5 qt)?
 - Jug labels mention real car brands in small print; the brief forbids real car brand names on the site. Use the photos only small/blurred, or rely on the 3D bottles instead.
 - Kurdish names/descriptions for each product, plus phone, WhatsApp, and Erbil address.
