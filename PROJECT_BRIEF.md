@@ -59,6 +59,8 @@ Sequence:
 
 ## Company history — for the About section (received 2026-10-24)
 
+Founder's name in Kurdish, as the user writes it: **کاک صلاح بایز** (English: Mr. Salah Bayaz). Use exactly this spelling in the Kurdish text.
+
 Timeline from the user (year read as the label of the milestone it follows — confirm):
 
 | Year | Title | Text (from the user) |
