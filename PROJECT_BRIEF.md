@@ -51,12 +51,13 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Five product brands so far, each with its own photo folder (white background, front view):
+Six product brands so far, each with its own photo folder (white background, front view):
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
 - **F-HORSE** → `assets/products/f-horse/`
 - **AROL Automotive** → `assets/products/arol/`
+- **RK STAR Automotive** → `assets/products/rk-star/`
 
 ### Brand 1 — AGDILCO
 
@@ -144,6 +145,21 @@ Label: product line "SUPERTECH", "Multigrade Universal Motor Oil", car + bus ico
 | 25 | Supertech | 15W-40 | SL/CF | 4 L | jug | Silver, yellow cap | `arol/15w40-4l-silver.webp` |
 | 26 | Supertech | 20W-50 | SL/CF | 5 L | jug | Silver, yellow cap | `arol/20w50-5l-silver.webp` |
 | 27 | Supertech | SAE 50 | CH-4 | 5 L | jug | Blue, black cap | `arol/sae50-5l-blue.webp` |
+
+### Brand 6 — RK STAR Automotive
+
+Brand description (from the user):
+> RK STAR Automotive Racing Oil is formulated for high-performance gasoline and diesel engines, delivering strong lubrication, engine cleanliness, and reliable wear protection. Designed for daily driving and heavy-duty usage, it ensures stable viscosity and efficient engine performance for up to 5000 KM service intervals.
+
+Specs given: Product range 10W-30 / 20W-50 · API: SL/CF · Oil type: Racing Motor Engine Oil · Service interval: up to 5000 KM · Size: 5 Liter
+Label: "RACING OIL", "Motor Engine Oil", "5000 KM — keep your engine clean", "Manufactured with highest additives". Logo: oil drop with gold "RK" monogram. Label style: brushed-metal plate with rivets, blue checkered flag. Jug: tall with angular handle and ribbed side grip.
+
+| # | Product | Grade | API | Size | Container | Jug color | Image |
+|---|---------|-------|-----|------|-----------|-----------|-------|
+| 28 | Racing Oil | 10W-30 | SL/CF | 5 L | jug | Gold/orange | `rk-star/10w30-5l-gold.webp` |
+| 29 | Racing Oil | 20W-50 | SL/CF | 5 L | jug | Silver | `rk-star/20w50-5l-silver.webp` |
+
+Note: labels carry a third-party "deluxe" badge — keep out of site text.
 
 Open questions for the user:
 - More brands coming? (User is sending products brand by brand.)
