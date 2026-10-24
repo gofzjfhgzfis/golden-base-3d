@@ -51,9 +51,10 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Two product brands so far, each with its own photo folder (white background, front view):
+Three product brands so far, each with its own photo folder (white background, front view):
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
+- **Rouge** → `assets/products/rouge/`
 
 ### Brand 1 — AGDILCO
 
@@ -89,6 +90,25 @@ Label tagline: "We Created For You". Labels say "ADVANCED", "multi type engine o
 | 12 | Transmission Fluid | ATF III | — | 1 L | bottle | Red, black/red label | `dallas/atf3-1l-red.webp` |
 
 Note: the ATF III label small print lists OEM/spec approvals (e.g. MERCON, MAN, ZF, Voith, Allison). Keep these out of site text; photos only shown small.
+
+### Brand 3 — Rouge Lubricants
+
+Brand description (from the user):
+> Rouge Lubricants are engineered for both gasoline and diesel engines, combining German additive technology with durable multi-grade formulations. Designed for long-lasting engine protection, Rouge delivers stable lubrication, improved wear resistance, and dependable performance under both daily and heavy-duty operating conditions.
+
+Specs given: Viscosity 10W-30 / 15W-40 / 20W-50 / SAE 50 / SAE 90 · API: SL/CF-4 / CF-4 / CH-4 / GL-1 · Compatibility: Gasoline, Diesel & Gear Systems · Technology: German Additive Technology · Packaging: 1 L / 5 L
+Label slogans: "One oil multi solutions", "You can race not just drive", "With the best Germany additive". Distinctive asymmetric "S-curve" bottle shape with side handle (both 1 L and 5 L).
+
+| # | Product | Grade | API | Size | Container | Bottle color / label | Image |
+|---|---------|-------|-----|------|-----------|----------------------|-------|
+| 13 | Engine Oil | 10W-30 | SL/CF-4 | 5 L | jug | Silver, grey/white label | `rouge/10w30-5l-silver-grey.webp` |
+| 14 | Engine Oil | SAE 50 | CF-4 | 5 L | jug | Silver, blue/purple label | `rouge/sae50-5l-silver-purple.webp` |
+| 15 | Diesel Engine Oil | SAE 50 | CF-4 | 5 L | jug | Silver, blue label (truck artwork) | `rouge/sae50-diesel-5l-silver-blue.webp` |
+| 16 | Gear Oil | SAE 90 | GL-1 | 1 L | bottle | Lime green, green/white label | `rouge/sae90-gl1-1l-green.webp` |
+| 17 | Engine Oil | 20W-50 | SL/CH-4 | 1 L | bottle | Blue, black/red label | `rouge/20w50-1l-blue.webp` |
+| 18 | Engine Oil | 15W-40 | SL/CF-4 | 1 L | bottle | Orange, yellow/white label | `rouge/15w40-1l-orange.webp` |
+
+Note: Rouge labels carry third-party marks (an "Auto Bild" magazine badge, a "deLuxe" badge) and the diesel label shows a truck. Keep these out of site text; photos only shown small.
 
 Open questions for the user:
 - More brands coming? (User is sending products brand by brand.)
