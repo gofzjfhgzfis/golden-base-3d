@@ -51,7 +51,7 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Ten product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
+Eleven product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
@@ -62,6 +62,7 @@ Ten product brands so far, each with its own photo folder (white background, fro
 - **Sea Ghost Lubricants** → `assets/products/sea-ghost/`
 - **MAX-X Lubricants** → `assets/products/max-x/`
 - **Deluxe Lubricants** → `assets/products/deluxe/`
+- **FAST Lube** → `assets/products/fast-lube/`
 
 ### Brand 1 — AGDILCO
 
@@ -240,6 +241,20 @@ Relation: the "deluxe" badge also appears on Rouge and RK STAR labels — likely
 | 48 | Fully Synthetic | 20W-50 | SL/CF | 5 L | Red, gold label | `deluxe/20w50-5l-red.webp` | OK |
 
 Notes: the eagle on the label resembles the German state emblem — don't reuse it as site artwork. Two 15W-40 labels — ask which is current (or show both as label variants of one product).
+
+### Brand 11 — FAST Lube
+
+Brand description (from the user):
+> FAST Lubricants are designed for dependable engine protection and smooth performance in both gasoline and diesel engines. Formulated with advanced base oils and high-performance additives, FAST ensures reduced wear, stable viscosity, and cleaner engine operation under daily and heavy-duty driving conditions.
+
+Specs given: Viscosity 20W-50 · API SL/CF · Gasoline & Diesel · Multi Grade Engine Oil · 5 L
+Label: "FAST LUBE", sub-line **"GOLDEN BASE — More Mileage"** (the company name is printed on this label → likely Golden Base's own/house brand alongside MAX-X). Red/black label with a pickup truck in dust.
+
+| # | Product | Grade | API | Size | Jug color | Image |
+|---|---------|-------|-----|------|-----------|-------|
+| 49 | FAST Lube Multi Grade | 20W-50 | SL/CF | 5 L | Silver, red/black label | `fast-lube/20w50-5l-silver.webp` |
+
+Note: the pickup on the label looks like a real production model — the brief forbids real car brands, so show this photo small only; never reuse the truck as site artwork.
 
 Open questions for the user:
 - Is MAX-X Golden Base's own/flagship brand (hero of the site) and the other 8 brands distributed products?
