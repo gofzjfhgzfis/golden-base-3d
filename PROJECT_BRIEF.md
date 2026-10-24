@@ -51,7 +51,7 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Eight product brands so far, each with its own photo folder (white background, front view):
+Nine product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
@@ -60,6 +60,7 @@ Eight product brands so far, each with its own photo folder (white background, f
 - **RK STAR Automotive** → `assets/products/rk-star/`
 - **LONA Lubricants** → `assets/products/lona/`
 - **Sea Ghost Lubricants** → `assets/products/sea-ghost/`
+- **MAX-X Lubricants** → `assets/products/max-x/`
 
 ### Brand 1 — AGDILCO
 
@@ -202,7 +203,27 @@ Open questions for the user (Sea Ghost):
 - Sizes (4 L / 5 L?) for all four.
 - Better (real) photos for #37 and #38 if available; the current ones have unreadable/invented label text.
 
+### Brand 9 — MAX-X Lubricants (likely flagship)
+
+Brand description (from the user):
+> MAX-X Lubricants is formulated with advanced synthetic and mineral technologies to provide durable engine protection, smoother operation, and enhanced performance. Designed for passenger vehicles, diesel engines, and gear systems, MAX-X delivers consistent lubrication, wear resistance, and thermal stability across a wide range of operating conditions.
+
+Specs given: Viscosity 10W-30 / 15W-40 / 20W-50 / SAE 50 / SAE 70 / SAE 90 · API: SL/CF, GL-4, GL-5 · Technology: Synthetic & Mineral Blend · Compatibility: Petrol, Diesel, Gear Systems · Packaging: 1 L / 5 L
+Label: logo "SYNTHETIC MAX-X" in red on a white oval with red ring; brushed-metal swoosh; feature badges "Engine Repair System" / "Active Repair System", "New Skin", "100% Power Full", "Protection from carbon and sediment", "Smooth Drive" (gear oil). Containers: orange 5 L jug with translucent peach cap and large curved recess on the side; 1 L bottles with the same recess.
+
+| # | Product line | Grade | API | Size | Container | Color / label | Image |
+|---|--------------|-------|-----|------|-----------|---------------|-------|
+| 39 | Standard 4000 (mineral) | 10W-30 | SL/CF | 5 L | jug | Orange, blue label | `max-x/10w30-standard4000-5l.webp` |
+| 40 | Premium 4000 (mineral) | 15W-40 | SL/CF | 1 L | bottle | Orange/gold, orange label | `max-x/15w40-premium4000-1l.png` |
+| 41 | Euro (mineral multigrade) | 20W-50 | SL/CF | 5 L | jug | Orange, green label | `max-x/20w50-euro-5l.webp` |
+| 42 | Universal Mineral | SAE 50 | SL/CF | 5 L | jug | Orange, lime label | `max-x/sae50-5l.webp` |
+| 43 | Universal Mineral | SAE 70 | SL/CF | 5 L | jug | Orange, yellow label | `max-x/sae70-5l.webp` |
+| 44 | Gear Oil "Smooth Drive" | SAE 90 | GL-4 & GL-5 | 1 L | bottle | Lime green, green label | `max-x/sae90-gear-1l.webp` |
+
+Note: #40 (15W-40 Premium 4000) small print is garbled ("MOTOR BIL", "BNTFOL") — looks AI-generated; ask for a real photo. Big text (MAX-X, 15W40, Premium 4000, 1L) is fine.
+
 Open questions for the user:
+- Is MAX-X Golden Base's own/flagship brand (hero of the site) and the other 8 brands distributed products?
 - More brands coming? (User is sending products brand by brand.)
 - Brand naming: site is for "Golden Base" / MAX-X, bottles say AGDILCO and Dallas UK. Is Golden Base the distributor of these brands? Is MAX-X a third brand (products not sent yet)? How should the names appear?
 - Jug products (5, 6): exact viscosity and size (e.g. 4 L / 5 qt)?
