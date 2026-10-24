@@ -51,10 +51,11 @@ Sequence:
 
 ## Products (received 2026-10-24)
 
-Three product brands so far, each with its own photo folder (white background, front view):
+Four product brands so far, each with its own photo folder (white background, front view):
 - **AGDILCO** → `assets/products/agdilco/`
 - **Dallas UK** → `assets/products/dallas/`
 - **Rouge** → `assets/products/rouge/`
+- **F-HORSE** → `assets/products/f-horse/`
 
 ### Brand 1 — AGDILCO
 
@@ -109,6 +110,24 @@ Label slogans: "One oil multi solutions", "You can race not just drive", "With t
 | 18 | Engine Oil | 15W-40 | SL/CF-4 | 1 L | bottle | Orange, yellow/white label | `rouge/15w40-1l-orange.webp` |
 
 Note: Rouge labels carry third-party marks (an "Auto Bild" magazine badge, a "deLuxe" badge) and the diesel label shows a truck. Keep these out of site text; photos only shown small.
+
+### Brand 4 — F-HORSE Lubricants
+
+Brand description (from the user):
+> F-HORSE Lubricants are specially engineered for Middle East conditions, delivering strong engine protection, high thermal stability, and reliable lubrication for gasoline, diesel, and transmission systems. Developed with advanced additive technology, F-HORSE ensures cleaner engines, smoother operation, and extended engine life under extreme heat and demanding driving conditions.
+
+Specs given: Product range 10W40 / 20W50 / SAE-40 / ATF III · API: SL/CF / CF-4 / DEXRON III · Technology: Premium Multi-Grade Formula · Sizes: 1L / 4L / 5L
+Label: "PREMIUM", slogan "New Technology Same Power", "Specially made for Middle East". Racing look: speedometer dial + checkered flag on black label. Jugs have a dotted-texture neck; bottles are squared with an integrated handle notch.
+
+| # | Product | Grade | API | Size | Container | Bottle color / label | Image |
+|---|---------|-------|-----|------|-----------|----------------------|-------|
+| 19 | Premium Engine Oil | 10W-40 | SL/CF | 4 L | jug | Silver, black racing label | `f-horse/10w40-4l-silver.webp` |
+| 20 | Premium Engine Oil | 20W-50 | SL/CF | 5 L | jug | Orange, black racing label | `f-horse/20w50-5l-orange.webp` |
+| 21 | Premium Engine Oil | 20W-50 | SL/CF | 1 L | bottle | Orange, black racing label | `f-horse/20w50-1l-orange.webp` |
+| 22 | Premium Engine Oil | SAE 40 | CF-4 | 1 L | bottle | Silver, black racing label | `f-horse/sae40-1l-silver.webp` |
+| 23 | Premium ATF III | Dexron III | — | 1 L | bottle | Red, black racing label | `f-horse/atf3-1l-red.webp` |
+
+Note: "DEXRON" is a third-party (car maker) trademark. On the site, write the spec as "ATF III (Dexron III spec)" at most, or just "ATF III" — confirm with the user.
 
 Open questions for the user:
 - More brands coming? (User is sending products brand by brand.)
