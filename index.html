@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ckb" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta name="description" content="Golden Base — engine oils, gear oils and transmission fluids in Erbil, Kurdistan. MAX-X, FAST Lube and 14 more brands." />
+    <title>Golden Base</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2C16 2 6 14 6 20a10 10 0 0 0 20 0C26 14 16 2 16 2z' fill='%23C9A34A'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Loading screen -->
+    <div class="loader" id="loader" aria-live="polite">
+      <svg class="loader-drop" viewBox="0 0 64 80" aria-hidden="true">
+        <defs>
+          <clipPath id="dropClip"><path d="M32 2C32 2 4 36 4 52a28 28 0 0 0 56 0C60 36 32 2 32 2z" /></clipPath>
+        </defs>
+        <path d="M32 2C32 2 4 36 4 52a28 28 0 0 0 56 0C60 36 32 2 32 2z" fill="none" stroke="#C9A34A" stroke-width="2" />
+        <rect class="loader-fill" clip-path="url(#dropClip)" x="0" y="80" width="64" height="80" fill="#C9A34A" />
+      </svg>
+      <div class="loader-pct" id="loader-pct" dir="ltr">0%</div>
+      <p class="loader-text" data-i18n="loader.text"></p>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header" id="top">
+      <a class="logo" href="#hero" aria-label="Golden Base">
+        <svg viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C16 1 2 18 2 26a14 14 0 0 0 28 0C30 18 16 1 16 1z" fill="url(#logoGrad)" /><defs><linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1D79A" /><stop offset="1" stop-color="#A67C2E" /></linearGradient></defs></svg>
+        <span dir="ltr">GOLDEN <b>BASE</b></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#hero" data-i18n="nav.home"></a>
+        <a href="#brands" data-i18n="nav.brands"></a>
+        <a href="#products" data-i18n="nav.products"></a>
+        <a href="#about" data-i18n="nav.about"></a>
+        <a href="#contact" data-i18n="nav.contact"></a>
+        <button type="button" class="nav-exp" data-open-experience>
+          <span class="pulse" aria-hidden="true"></span><span data-i18n="nav.experience"></span>
+        </button>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="lang-toggle" id="lang-toggle" data-i18n="nav.lang"></button>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" data-i18n-aria="nav.menu"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero: pinned, scroll-rotating bottles -->
+      <section class="hero" id="hero">
+        <div class="hero-pin">
+          <canvas id="hero-canvas" aria-hidden="true"></canvas>
+          <div class="hero-intro">
+            <p class="kicker" data-i18n="hero.kicker"></p>
+            <h1 class="hero-title" data-i18n="hero.title"></h1>
+            <p class="hero-sub" data-i18n="hero.subtitle"></p>
+            <div class="hero-ctas">
+              <a class="btn btn-gold" href="#products" data-i18n="hero.ctaProducts"></a>
+              <button type="button" class="btn btn-ghost" data-open-experience data-i18n="hero.ctaExperience"></button>
+            </div>
+          </div>
+          <div class="hero-products" id="hero-products"></div>
+          <div class="hero-dots" id="hero-dots"></div>
+          <div class="scroll-hint"><span data-i18n="hero.scroll"></span><i></i></div>
+        </div>
+      </section>
+
+      <!-- Brands -->
+      <section class="section brands" id="brands">
+        <div class="container">
+          <p class="kicker reveal" data-i18n="brands.kicker"></p>
+          <h2 class="section-title reveal" id="brands-title"></h2>
+          <p class="section-text reveal" data-i18n="brands.text"></p>
+        </div>
+        <div class="brand-marquee" aria-hidden="true"><div class="brand-marquee-track" id="brand-marquee"></div></div>
+        <div class="container"><div class="brand-grid" id="brand-grid"></div></div>
+      </section>
+
+      <!-- Products -->
+      <section class="section products" id="products">
+        <div class="container">
+          <p class="kicker reveal" data-i18n="products.kicker"></p>
+          <h2 class="section-title reveal" data-i18n="products.title"></h2>
+          <div class="filters">
+            <input type="search" class="search" id="product-search" data-i18n-placeholder="products.search" autocomplete="off" />
+            <select id="brand-filter" class="select" aria-label="Brand"></select>
+            <div class="chips" id="kind-filter"></div>
+          </div>
+          <p class="result-count" id="result-count"></p>
+          <div class="product-grid" id="product-grid"></div>
+          <p class="empty" id="product-empty" data-i18n="products.empty" hidden></p>
+          <div class="more-wrap"><button type="button" class="btn btn-ghost" id="show-more" data-i18n="products.showMore"></button></div>
+        </div>
+      </section>
+
+      <!-- Experience call to action -->
+      <section class="section exp-cta" id="experience-cta">
+        <div class="container exp-cta-inner">
+          <div class="exp-cta-copy">
+            <p class="kicker reveal" data-i18n="cta.kicker"></p>
+            <h2 class="section-title reveal" data-i18n="cta.title"></h2>
+            <p class="section-text reveal" data-i18n="cta.text"></p>
+            <button type="button" class="btn btn-gold reveal" data-open-experience data-i18n="cta.button"></button>
+          </div>
+          <div class="exp-cta-art" aria-hidden="true">
+            <svg viewBox="0 0 480 200">
+              <defs>
+                <linearGradient id="carGrad" x1="0" x2="1"><stop offset="0" stop-color="#6b5320" /><stop offset=".5" stop-color="#E6C27A" /><stop offset="1" stop-color="#6b5320" /></linearGradient>
+              </defs>
+              <path class="car-line" d="M20 140 L48 112 Q60 104 90 102 L150 98 Q190 60 250 56 L320 58 Q360 62 392 96 L440 104 Q462 108 464 128 L464 142 Q462 150 450 150 L420 150 M350 150 L150 150 M80 150 L30 150 Q20 150 20 140 Z" fill="none" stroke="url(#carGrad)" stroke-width="2.5" />
+              <circle class="car-line" cx="115" cy="150" r="30" fill="none" stroke="url(#carGrad)" stroke-width="2.5" />
+              <circle class="car-line" cx="385" cy="150" r="30" fill="none" stroke="url(#carGrad)" stroke-width="2.5" />
+              <path class="car-line" d="M168 98 L196 72 Q216 64 250 64 L300 66 L310 98 Z M318 98 L312 66 Q346 70 368 96 Z" fill="none" stroke="url(#carGrad)" stroke-width="1.6" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- About + timeline -->
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="about-head">
+            <div>
+              <p class="kicker reveal" data-i18n="about.kicker"></p>
+              <h2 class="section-title reveal" data-i18n="about.title"></h2>
+              <p class="section-text reveal" data-i18n="about.text"></p>
+            </div>
+            <div class="stats">
+              <div class="stat reveal"><b data-count="25" data-suffix="+" dir="ltr">0</b><span data-i18n="about.stat.years"></span></div>
+              <div class="stat reveal"><b data-count-brands dir="ltr">0</b><span data-i18n="about.stat.brands"></span></div>
+              <div class="stat reveal"><b data-count-products dir="ltr">0</b><span data-i18n="about.stat.products"></span></div>
+              <div class="stat reveal"><b class="stat-word" data-i18n="about.stat.city"></b><span data-i18n="about.stat.cityLabel"></span></div>
+            </div>
+          </div>
+
+          <h3 class="timeline-title reveal" data-i18n="about.timeline"></h3>
+          <ol class="timeline" id="timeline">
+            <li class="timeline-line" aria-hidden="true"><span></span></li>
+            <li class="milestone"><span class="year" dir="ltr">2001</span><div><h4 data-i18n="timeline.2001.title"></h4><p data-i18n="timeline.2001.text"></p></div></li>
+            <li class="milestone"><span class="year" dir="ltr">2009</span><div><h4 data-i18n="timeline.2009.title"></h4><p data-i18n="timeline.2009.text"></p></div></li>
+            <li class="milestone"><span class="year" dir="ltr">2016</span><div><h4 data-i18n="timeline.2016.title"></h4><p data-i18n="timeline.2016.text"></p></div></li>
+            <li class="milestone"><span class="year" dir="ltr">2026</span><div><h4 data-i18n="timeline.2026.title"></h4><p data-i18n="timeline.2026.text"></p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <p class="kicker reveal" data-i18n="contact.kicker"></p>
+          <h2 class="section-title reveal" data-i18n="contact.title"></h2>
+          <p class="section-text reveal" data-i18n="contact.text"></p>
+          <div class="contact-grid">
+            <a class="contact-card reveal" id="contact-phone">
+              <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" /></svg></span>
+              <span class="contact-label" data-i18n="contact.phone"></span>
+              <b class="contact-value" dir="ltr" data-phone></b>
+              <span class="contact-cta" data-i18n="contact.callCta"></span>
+            </a>
+            <a class="contact-card whatsapp reveal" id="contact-whatsapp" target="_blank" rel="noopener">
+              <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a15 15 0 0 1-1.5-.6 12 12 0 0 1-4.6-4 5.2 5.2 0 0 1-1.1-2.8 3 3 0 0 1 1-2.2 1 1 0 0 1 .7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 1.5 1.9 7.4 7.4 0 0 0 2.2 1.3c.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.2z" /></svg></span>
+              <span class="contact-label" data-i18n="contact.whatsapp"></span>
+              <b class="contact-value" dir="ltr" data-phone></b>
+              <span class="contact-cta" data-i18n="contact.whatsappCta"></span>
+            </a>
+            <a class="contact-card reveal" id="contact-map" target="_blank" rel="noopener">
+              <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" /></svg></span>
+              <span class="contact-label" data-i18n="contact.location"></span>
+              <b class="contact-value" data-i18n="contact.locationValue"></b>
+              <span class="contact-cta" data-i18n="contact.mapCta"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span class="logo small" dir="ltr">GOLDEN <b>BASE</b></span>
+        <span data-i18n="footer.tagline"></span>
+        <span id="footer-rights"></span>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp button -->
+    <a class="wa-float" id="wa-float" target="_blank" rel="noopener" data-i18n-aria="contact.whatsapp">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a15 15 0 0 1-1.5-.6 12 12 0 0 1-4.6-4 5.2 5.2 0 0 1-1.1-2.8 3 3 0 0 1 1-2.2 1 1 0 0 1 .7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.2.3-.1.5a8 8 0 0 0 1.5 1.9 7.4 7.4 0 0 0 2.2 1.3c.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.2z" /></svg>
+    </a>
+
+    <!-- Oil Change Experience overlay (3D scene is loaded on first open) -->
+    <div class="experience" id="experience" role="dialog" aria-modal="true" aria-labelledby="exp-title" hidden>
+      <canvas id="exp-canvas"></canvas>
+      <div class="exp-top">
+        <h2 id="exp-title" data-i18n="exp.title"></h2>
+        <div class="exp-top-actions">
+          <button type="button" class="icon-btn" data-action="mute" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z" /></svg>
+            <span data-i18n="exp.mute"></span>
+          </button>
+          <button type="button" class="icon-btn" data-action="close">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z" /></svg>
+            <span data-i18n="exp.close"></span>
+          </button>
+        </div>
+      </div>
+      <ol class="exp-steps">
+        <li data-i18n="exp.step1"></li>
+        <li data-i18n="exp.step2"></li>
+        <li data-i18n="exp.step3"></li>
+        <li data-i18n="exp.step4"></li>
+        <li data-i18n="exp.step5"></li>
+      </ol>
+      <p class="exp-status" aria-live="polite"></p>
+      <p class="exp-hint" data-i18n="exp.orbit"></p>
+      <button type="button" class="btn btn-gold exp-main is-visible" data-action="disassemble" data-i18n="exp.disassemble"></button>
+      <div class="exp-picker">
+        <h3 data-i18n="exp.pick"></h3>
+        <div class="exp-picker-chips"></div>
+        <div class="exp-picker-grid"></div>
+      </div>
+      <div class="exp-final">
+        <svg viewBox="0 0 64 80" aria-hidden="true"><path d="M32 2C32 2 4 36 4 52a28 28 0 0 0 56 0C60 36 32 2 32 2z" fill="#C9A34A" /><path d="M20 50l9 9 16-18" fill="none" stroke="#0a0a0b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        <p class="exp-final-text"></p>
+        <div class="exp-final-actions">
+          <button type="button" class="btn btn-gold" data-action="replay" data-i18n="exp.replay"></button>
+          <button type="button" class="btn btn-ghost" data-action="another" data-i18n="exp.another"></button>
+          <a class="btn btn-wa" data-action="order" target="_blank" rel="noopener" data-i18n="exp.order"></a>
+        </div>
+      </div>
+      <div class="exp-loading">
+        <p data-i18n="exp.loading"></p>
+        <div class="exp-loading-bar"><span></span></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

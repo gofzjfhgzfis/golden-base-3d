@@ -75,22 +75,22 @@ Design idea: a scroll-driven timeline (a golden oil line "pours" down the page a
 ## Products (received 2026-10-24)
 
 Sixteen product brands so far, each with its own photo folder (white background, front view). **MAX-X** is named in the site brief ("Golden Base / MAX-X"), so it is likely the flagship brand — confirm with the user.
-- **AGDILCO** → `assets/products/agdilco/`
-- **Dallas UK** → `assets/products/dallas/`
-- **Rouge** → `assets/products/rouge/`
-- **F-HORSE** → `assets/products/f-horse/`
-- **AROL Automotive** → `assets/products/arol/`
-- **RK STAR Automotive** → `assets/products/rk-star/`
-- **LONA Lubricants** → `assets/products/lona/`
-- **Sea Ghost Lubricants** → `assets/products/sea-ghost/`
-- **MAX-X Lubricants** → `assets/products/max-x/`
-- **Deluxe Lubricants** → `assets/products/deluxe/`
-- **FAST Lube** → `assets/products/fast-lube/`
-- **Michel Lubricant** → `assets/products/michel/`
-- **MOIL Lubricants** → `assets/products/moil/`
-- **HUSTON Lubricants** → `assets/products/huston/`
-- **green lube** → `assets/products/green-lube/`
-- **Original Automotive** → `assets/products/original/`
+- **AGDILCO** → `public/products/agdilco/`
+- **Dallas UK** → `public/products/dallas/`
+- **Rouge** → `public/products/rouge/`
+- **F-HORSE** → `public/products/f-horse/`
+- **AROL Automotive** → `public/products/arol/`
+- **RK STAR Automotive** → `public/products/rk-star/`
+- **LONA Lubricants** → `public/products/lona/`
+- **Sea Ghost Lubricants** → `public/products/sea-ghost/`
+- **MAX-X Lubricants** → `public/products/max-x/`
+- **Deluxe Lubricants** → `public/products/deluxe/`
+- **FAST Lube** → `public/products/fast-lube/`
+- **Michel Lubricant** → `public/products/michel/`
+- **MOIL Lubricants** → `public/products/moil/`
+- **HUSTON Lubricants** → `public/products/huston/`
+- **green lube** → `public/products/green-lube/`
+- **Original Automotive** → `public/products/original/`
 
 ### Brand 1 — AGDILCO
 
